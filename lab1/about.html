@@ -33,21 +33,34 @@ in html
         
         <br /><br />
         
-        <main>
-            <figure id="me">
-                <img src="img/rb_portrait.jpg" alt="Picture of Ryan Blakeman" />
-            </figure>
-            
-            <div id="welcomeText">
-                Hello! <br />
-                <p>Welcome to my professional portfolio website</p>
-                <p>I am a Senior year Computer Science student focusing on Game Development</p>
-                <p>Feel free to contact me!</p>
-                <br /><br />
-                <em>"Something Thoughtful"</em><br />
-                - Poet
-            </div>
-        </main>
+        <!-- div with an id called content which -->
+        <div id="content">
+            <!-- Create the table to hold experience data -->
+            <table>
+                <tr id="table-header">
+                    <td><strong>Programming Language</strong></td>
+                    <td><strong>Years Experience</strong></td>
+                </tr>
+                <tr class="table-row">
+                    <td>Java</td>
+                    <td>3</td>
+                </tr>
+                <tr class="table-row">
+                    <td>C++</td>
+                    <td>2</td>
+                </tr>
+                <tr class="table-row">
+                    <td>PHP</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <ul>
+                <li><span class="hobby">Hobby: </span> Video games, petting my <span class="strikethrough">whining child</span> cat </li>
+                <li><span class="hobby">Sports: </span> CS:GO (jk), Golf!</li>
+                <li><span class="hobby">Music: </span> Rock, Musicals, Orchaestral</li>
+                <li><span class="hobby">Programming: </span> C++ or C# mostly</li>
+            </ul>
+        </div>
         
         <!-- This is the footer -->
         <!-- The footer goes inside the body but not always -->
