@@ -14,13 +14,27 @@ header, main, nav, footer {
 nav a: {
     /* links within "nav" containter */
     padding:15px;
-    padding-bottom:4px;
+    /*padding-bottom:4px;*/
     font-size:1.8em;
     text-decoration: none;    /* removes underline */
     color: white;            /* by default, links are blue */
 }
 nav a:hover { /*psuedo class*/
-    border-bottom:2px orange solid;
+    /*border-bottom:2px white solid;*/
+    font-size: 2em;
+    transition: .9s; /* transition effect */
+}
+
+nav b: {
+    /* links within "nav" containter */
+    padding:15px;
+    /*padding-bottom:4px;*/
+    font-size:1.8em;
+    text-decoration: none;    /* removes underline */
+    color: white;            /* by default, links are blue */
+}
+nav b:hover { /*psuedo class*/
+    /*border-bottom:2px white solid;*/
     font-size: 2em;
     transition: .9s; /* transition effect */
 }
@@ -70,4 +84,10 @@ ul {
 
 .strikethrough {
     text-decoration: line-through;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
 }
