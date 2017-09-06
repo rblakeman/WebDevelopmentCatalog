@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color:white;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+nav a {
+    text-decoration:none;
+}
+
+nav b {
+    
+}
