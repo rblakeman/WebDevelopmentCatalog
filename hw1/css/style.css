@@ -1,16 +1,55 @@
+header {
+    text-align: center;
+    font-size: 30px;
+}
+header img {
+    max-width: 70px;
+}
+
 body {
     background-color: black;
     color:white;
 }
 
-header, main, nav, footer {
+main, nav, footer {
     text-align: center;
 }
 
 nav a {
+    color: white;
     text-decoration:none;
+    font-size: 25px;
 }
 
 nav b {
-    
+    color: white;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+
+
+
+
+.whatIs {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+#nameText {
+    font-size: 50px;
+}
+
+#engineIcon img {
+    max-width: 250px;
+    float:right;
+}
+
+#unityScreenshot img, #unrealScreenshot img, #gamemakerScreenshot img {
+    max-width:1000px;
 }
