@@ -14,6 +14,9 @@ body {
 main, nav, footer {
     text-align: center;
 }
+footer {
+    color: lightblue;
+}
 
 nav a {
     color: white;
@@ -22,27 +25,52 @@ nav a {
 }
 
 nav b {
-    color: white;
+    color: red;
     text-decoration: underline;
     font-size: 25px;
 }
 
 
 
-
-
-.whatIs {
+#welcomeText {
+    font-size: 20px;
+}
+#introText {
+    font-size: 20px;
+}
+.whatTitle {
     text-decoration: underline;
+}
+
+#howPic img {
+    max-width: 400px;
+}
+.imgframe
+{
+    background:red;
+    padding:5px;
+    border:1px solid black;
 }
 
 
 
 
-
-
-
-#nameText {
+#unityName {
     font-size: 50px;
+    font-family: 'Ubuntu', 'Roboto', Serif;
+    
+}
+#unrealName {
+    font-size: 50px;
+    font-family: 'Archivo Black', Sans-Serif;
+}
+#gamemakerName {
+    font-size: 50px;
+    font-family: 'Poppins', 'Open Sans', Serif;
+}
+
+#engineText {
+    font-size: 20px;
 }
 
 #engineIcon img {
@@ -52,4 +80,13 @@ nav b {
 
 #unityScreenshot img, #unrealScreenshot img, #gamemakerScreenshot img {
     max-width:1000px;
+}
+
+#referenceText {
+    font-style: italic;
+}
+#referenceText r {
+    font-style: normal;
+    text-decoration: underline;
+    color: green;
 }
