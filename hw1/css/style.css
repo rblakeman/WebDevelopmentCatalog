@@ -15,17 +15,33 @@ main, nav, footer {
     text-align: center;
 }
 footer {
-    color: lightblue;
+    color: violet;
 }
 
 nav a {
     color: white;
     text-decoration:none;
     font-size: 25px;
+    padding-left: 15px;
 }
 
 .current {
     color: red;
+    text-decoration: underline;
+    font-size: 25px;
+}
+.currentUnity {
+    color: orange;
+    text-decoration: underline;
+    font-size: 25px;
+}
+.currentUnreal {
+    color: lightblue;
+    text-decoration: underline;
+    font-size: 25px;
+}
+.currentGameMaker {
+    color: green;
     text-decoration: underline;
     font-size: 25px;
 }
@@ -39,10 +55,16 @@ hr {
 #welcomeText {
     font-size: 20px;
 }
+.firstLetter {
+    font-style: italic;
+    font-size:30px;
+    color:red;
+}
 #introText {
     font-size: 20px;
 }
 .whatTitle {
+    font-size:30px;
     text-decoration: underline;
 }
 
@@ -63,13 +85,14 @@ hr {
 #unityName {
     font-size: 50px;
     font-family: 'Ubuntu', 'Roboto', Serif;
-    text-shadow: 4px 4px 4px teal;
+    text-shadow: 4px 4px 4px orange;
     
 }
 #unrealName {
     font-size: 50px;
     font-family: 'Archivo Black', Sans-Serif;
     text-transform: uppercase;
+    text-shadow: 4px 4px 4px darkblue;
 }
 #gamemakerName {
     font-size: 50px;
@@ -94,8 +117,21 @@ hr {
 #referenceText {
     font-style: italic;
 }
-#referenceText h2 {
+.rUnity {
+    font-style: normal;
+    text-decoration: underline;
+    color: orange;
+    padding-left: 10px;
+}
+.rUnreal {
+    font-style: normal;
+    text-decoration: underline;
+    color: lightblue;
+    padding-left: 10px;
+}
+.rGameMaker {
     font-style: normal;
     text-decoration: underline;
     color: green;
+    padding-left: 10px;
 }
