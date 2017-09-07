@@ -87,13 +87,6 @@ hr {
     float:right;
 }
 
-#logoCaption {
-    font-size: 5px;
-    text-align: right;
-    display:inline-block;
-    margin:10px;
-}
-
 #unityScreenshot img, #unrealScreenshot img, #gamemakerScreenshot img {
     max-width:1000px;
 }
