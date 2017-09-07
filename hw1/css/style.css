@@ -94,6 +94,9 @@ hr {
     text-transform: uppercase;
     text-shadow: 4px 4px 4px darkblue;
 }
+cite { 
+    font-style: italic;
+}
 #gamemakerName {
     font-size: 50px;
     font-family: 'Poppins', 'Open Sans', Serif;
@@ -114,9 +117,6 @@ hr {
     max-width:1000px;
 }
 
-#referenceText {
-    font-style: italic;
-}
 .rUnity {
     font-style: normal;
     text-decoration: underline;
