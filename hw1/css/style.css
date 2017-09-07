@@ -94,7 +94,7 @@ hr {
 #referenceText {
     font-style: italic;
 }
-#referenceText r {
+#referenceText h2 {
     font-style: normal;
     text-decoration: underline;
     color: green;
