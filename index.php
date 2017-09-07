@@ -8,15 +8,14 @@
         </h1>
         <u1 id:"labmenu">
             Labs
-            <li>
-            <a href="lab1/index.html">Lab 1</a>
+            <li> <a href="lab1/index.html">Lab 1</a> </li>
+            <li> <a href="lab2/index.html">Lab 2</a> </li>
             <p></p>
         </u1>    
         <u1 id:"hwmenu">
             Homeworks
-            <li>
-            <a href="hw1/index.html">Homework 1</a>    
-            </li>
+            <li> <a href="hw1/index.html">Homework 1</a> </li>
+            <li> <a href="hw2/index.html">Homework 2</a> </li>
         </u1>
     </body>
 </html>
