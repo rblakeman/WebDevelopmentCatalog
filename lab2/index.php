@@ -4,16 +4,38 @@
         <meta charset="utf-8" />
         <title> Lab 2 </title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     </head>
     <body>
         <header>
-            
+            <h1>Slot Machine</h1>
         </header>
         <nav>
             
         </nav>
         <main>
-            <p>Bar = 10pts. Bell = 5pts. Cherry = 1pts. Seven = 50pts</p>
+            <table>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Cherry</td>
+                    <td>1pts</td>
+                </tr>
+                <tr>
+                    <td>Bell</td>
+                    <td>5pts</td>
+                </tr>
+                <tr>
+                    <td>Bar</td>
+                    <td>10pts</td>
+                </tr>
+                <tr>
+                    <td>Seven</td>
+                    <td>50pts</td>
+                </tr>
+            </table>
             <?php
                 $icon[0] = "img/bar.jpg";
                 $icon[1] = "img/bell.jpg";
@@ -39,17 +61,53 @@
                     else if ($result[$i] == 3)
                         $seven = $seven + 1;
                 }
-                if ($bar >= 3)
+                if ($bar >= 3) {
                     $score = 10*$bar;
-                if ($bell >= 3)
+                    echo "Score: ";
+                    echo $score;
+                    echo "pts";
+                    
+                    echo  nl2br ("\n");
+                    
+                    echo $bar;
+                    echo " Bars";
+                }
+                else if($bell >= 3) {
                     $score = 5*$bell;
-                if ($cherry >= 3)
+                    echo "Score: ";
+                    echo $score;
+                    echo "pts";
+                    
+                    echo  nl2br ("\n");
+                    
+                    echo $bell;
+                    echo " Bells";
+                }
+                else if ($cherry >= 3) {
                     $score = 1*$cherry;
-                if ($seven >= 3)
+                    echo "Score: ";
+                    echo $score;
+                    echo "pts";
+                    
+                    echo  nl2br ("\n");
+                                        
+                    echo $cherry;
+                    echo " Cherries";
+                }
+                else if ($seven >= 3) {
                     $score = 50*$seven;
-                
-                echo "Score: ";
-                echo $score;
+                    echo "Score: ";
+                    echo $score;
+                    echo "pts";
+                    
+                    echo  nl2br ("\n");
+                    
+                    echo $seven;
+                    echo " Sevens";
+                }
+                else {
+                    echo "Try Again!";
+                }
             ?>
             
         </main>
