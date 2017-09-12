@@ -1,18 +1,24 @@
 body {
-    background-image: url("./img/background.png");
+    background-image: url("../img/background.jpg");
+    text-align:center;
 }
 h1 {
     font-family: 'Pacifico', cursive;
 }
 main {
-    
+    text-align:center;
+    color:white;
 }
-
-nav {
-    
+header {
+    text-align:center;
+    color:white;
+}
+table {
+    margin: 0 auto;
 }
 footer {
-    
+    text-align:center;
+    color:white;
 }
 #symbolIcon {
     
