@@ -5,6 +5,7 @@
         <title> Lab 2 </title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -46,11 +47,10 @@
                 <img src=<?php echo $icon[$result[0]=rand(0,3)] ?> alt="Icon" />
                 <img src=<?php echo $icon[$result[1]=rand(0,3)] ?> alt="Icon" />
                 <img src=<?php echo $icon[$result[2]=rand(0,3)] ?> alt="Icon" />
-                <img src=<?php echo $icon[$result[3]=rand(0,3)] ?> alt="Icon" />
             </figure>
-            <?php
+            <div id="points"><?php
                 $bar = $bell = $cherry = $seven = $score = 0;
-                for ($i = 0; $i < 4; $i++)
+                for ($i = 0; $i < 3; $i++)
                 {
                     if ($result[$i] == 0)
                         $bar = $bar + 1;
@@ -61,7 +61,7 @@
                     else if ($result[$i] == 3)
                         $seven = $seven + 1;
                 }
-                if ($bar >= 3) {
+                if ($bar == 3) {
                     $score = 10*$bar;
                     echo "Score: ";
                     echo $score;
@@ -72,7 +72,7 @@
                     echo $bar;
                     echo " Bars";
                 }
-                else if($bell >= 3) {
+                else if($bell == 3) {
                     $score = 5*$bell;
                     echo "Score: ";
                     echo $score;
@@ -83,7 +83,7 @@
                     echo $bell;
                     echo " Bells";
                 }
-                else if ($cherry >= 3) {
+                else if ($cherry == 3) {
                     $score = 1*$cherry;
                     echo "Score: ";
                     echo $score;
@@ -94,7 +94,7 @@
                     echo $cherry;
                     echo " Cherries";
                 }
-                else if ($seven >= 3) {
+                else if ($seven == 3) {
                     $score = 50*$seven;
                     echo "Score: ";
                     echo $score;
@@ -108,7 +108,7 @@
                 else {
                     echo "Try Again!";
                 }
-            ?>
+            ?></div>
             
         </main>
         <footer>

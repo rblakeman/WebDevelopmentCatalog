@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-image: url("./img/background.png");
 }
 h1 {
     font-family: 'Pacifico', cursive;
@@ -7,6 +7,7 @@ h1 {
 main {
     
 }
+
 nav {
     
 }
@@ -15,4 +16,8 @@ footer {
 }
 #symbolIcon {
     
+}
+
+#points {
+    font-family: 'Baloo Bhaina', cursive;
 }
