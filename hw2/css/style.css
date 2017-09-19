@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    background: springgreen;
+    background-image: url(../img/);
+}
+header {
+    font-size: 30px;
+}
+nav {
+    font-size: 20px;
+    color:black;
+    text-decoration: underline;
+}
+nav img {
+    max-width: 100px;
+}
+
+.clickHyperlink {
+    font-family: 'Indie Flower', cursive;
+}
+
+#points {
+    color: red;
+}
+
+#harold img {
+    border: 3px solid #FF00FF;
+    margin: auto;
+    max-width: 20px;
+}
+
+#limitededition {
+    font-family: 'Pacifico', cursive;
+    color: darkGray;
+}

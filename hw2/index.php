@@ -4,16 +4,69 @@
         <meta charset="utf-8" />
         <title> Homework 2 </title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     </head>
     <body>
         <header>
-            
+            <h1 style="display:inline-block;">Random Number Generator</h1>
         </header>
         <nav>
-            
+            <a class="clickHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php">Click! -></a>
+            <a class="buttonHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php"><img src="img/button.jpg"/></a>
         </nav>
         <main>
-            
+            <div id="displayed numbers"><?php
+                echo  nl2br ("\n");
+                $amount = rand(0,51);
+                $zero = false;
+                echo "Result(s): ";
+                if ($amount == 0) {
+                        echo "You got 0! What are the odds??";
+                        $zero = true;
+                }
+                else {
+                    for ($i = 0; $i < $amount; $i++)
+                    {
+                        echo $ray[$i] = rand(0,100);
+                        echo " ";
+                    }
+                    for ($j = 0; $j < count($ray); $j++)
+                    {
+                        $sum += $ray[$j];
+                    }
+                    echo  nl2br ("\n");
+                    echo  nl2br ("\n");
+                    echo "Wow! You got: ";
+                }
+
+            ?>
+            <span id="points"><?php
+            if (!$zero) {
+                echo $sum;
+                echo "pts! ";
+            }
+            ?></span>
+            <?php
+            if (!$zero) {
+                echo  nl2br ("\n");
+                echo "For an average of: ";
+                echo $sum/count($ray);
+                echo " from ";
+                echo count($ray);
+                echo " numbers.";
+                echo  nl2br ("\n");
+                echo  nl2br ("\n");
+                $haroldnum = $sum%5;
+                $haroldnum += 1;
+            }
+            ?></div>
+            <div id="haroldtxt">
+                Your prize! You got a <span id="limitededition">limited edition</span> Harold #<?php echo $haroldnum ?>!
+            </div>
+            <div id="haroldimg">
+                <img src="img/harold<?php echo $haroldnum ?>.png"/>
+            </div>
         </main>
         <footer>
             <hr>
