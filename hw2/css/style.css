@@ -1,7 +1,6 @@
 body {
     text-align: center;
-    background: springgreen;
-    background-image: url(../img/);
+    background: cyan;
 }
 header {
     font-size: 30px;
@@ -21,15 +20,25 @@ nav img {
 
 #points {
     color: red;
+    text-decoration: underline;
 }
 
-#harold img {
-    border: 3px solid #FF00FF;
+#numbers {
+    color: green;
+    font-style: italic;
+}
+
+#haroldimg img {
+    border: 3px solid fuchsia;
     margin: auto;
-    max-width: 20px;
+    max-width: 1000px;
 }
 
 #limitededition {
     font-family: 'Pacifico', cursive;
     color: darkGray;
+}
+
+#picturecaption {
+    font-size: 10px;
 }

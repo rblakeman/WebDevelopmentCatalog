@@ -12,7 +12,8 @@
             <h1 style="display:inline-block;">Random Number Generator</h1>
         </header>
         <nav>
-            <a class="clickHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php">Click! -></a>
+            <a class="clickHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php">Click!</a>
+            <div></div>
             <a class="buttonHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php"><img src="img/button.jpg"/></a>
         </nav>
         <main>
@@ -44,17 +45,20 @@
             <span id="points"><?php
             if (!$zero) {
                 echo $sum;
-                echo "pts! ";
+                echo "pts!";
             }
             ?></span>
             <?php
             if (!$zero) {
+                echo " ";
                 echo  nl2br ("\n");
                 echo "For an average of: ";
                 echo $sum/count($ray);
-                echo " from ";
+                echo " from ";?>
+            <span id="numbers"><?php
                 echo count($ray);
                 echo " numbers.";
+                ?></span><?php
                 echo  nl2br ("\n");
                 echo  nl2br ("\n");
                 $haroldnum = $sum%5;
@@ -62,10 +66,21 @@
             }
             ?></div>
             <div id="haroldtxt">
-                Your prize! You got a <span id="limitededition">limited edition</span> Harold #<?php echo $haroldnum ?>!
+                Your prize! <span id="limitededition">Limited Edition</span> Harold #
+                <?php
+                if (!$zero) {
+                    echo $haroldnum;
+                }
+                else {
+                    echo "no harold for youuu";
+                }
+                ?>!
             </div>
             <div id="haroldimg">
                 <img src="img/harold<?php echo $haroldnum ?>.png"/>
+            </div>
+            <div id="picturecaption">
+                (prize determined by sum modulo 5)
             </div>
         </main>
         <footer>
