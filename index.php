@@ -16,7 +16,7 @@
         <u1 id:"hwmenu">
             Homeworks
             <li> <a href="hw1/index.html">Homework 1</a> </li>
-            <li> <a href="hw2/index.html">Homework 2</a> </li>
+            <li> <a href="hw2/index.php">Homework 2</a> </li>
         </u1>
     </body>
 </html>
