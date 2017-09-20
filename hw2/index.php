@@ -61,7 +61,9 @@
                 ?></span><?php
                 echo  nl2br ("\n");
                 echo  nl2br ("\n");
-                $haroldnum = $sum%5;
+                if (!$zero) {
+                    $haroldnum = $sum%5;
+                }
                 $haroldnum += 1;
             }
             ?></div>
