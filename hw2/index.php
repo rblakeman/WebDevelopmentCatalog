@@ -12,9 +12,9 @@
             <h1 style="display:inline-block;">Random Number Generator</h1>
         </header>
         <nav>
-            <a class="clickHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php">Click!</a>
+            <a class="clickHyperlink" href="index.php">Click!</a>
             <div></div>
-            <a class="buttonHyperlink" href="https://cst336blakeman-rblakeman.c9users.io/cst336-github/hw2/index.php"><img src="img/button.jpg"/></a>
+            <a class="buttonHyperlink" href="index.php"><img src="img/button.jpg"/></a>
         </nav>
         <main>
             <div id="displayed numbers"><?php
