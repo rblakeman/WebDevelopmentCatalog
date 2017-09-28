@@ -1,6 +1,6 @@
 Requirements                                                                                                        Points
 The form includes at least six HTML Form Elements                                                                   20pts
 There are at least four different types of Form Elements (text, checkbox, radio, select, number, submit, etc.)      20pts
-Upon submission of the form, the data is "processed" and new data is displayed. Do not just display the same data.  20pts
+Upon submission of the form, the data is "processed" and new data is displayed. Do not just display the same data.  25pts
 There is validation for all unset or empty values with error messages.                                              25pts
-There is an external CSS with at least 20 rules	10pts                                                               25pts
+There is an external CSS with at least 20 rules	10pts                                                               10pts
