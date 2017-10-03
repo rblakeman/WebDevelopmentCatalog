@@ -1,0 +1,21 @@
+body{
+    opacity:0.9;
+    width:100%;
+    text-align:center;
+}
+
+input {
+    margin: 0 auto;
+    font-size: 20px;
+    color: Gray;
+}
+
+#error {
+    color:red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 20px;
+}

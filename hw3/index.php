@@ -29,7 +29,9 @@
 
         </main>
         <footer>
-            
+            <hr>
+            CST 336. 2017&copy; Blakeman <br />
+            <strong>Disclaimer:</strong> The information is used for academic purposes only. <br />
         </footer>
     </body>
     
