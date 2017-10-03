@@ -4,8 +4,17 @@
     
     if(isset($_GET['keyword']))
         $keyword = $_GET['keyword'];
-        $imageURLs = getImageURLs($keyword);
-        $backgroundImage = $imageURLs[array_rand($imageURLs)];
+        $orientation = $_GET['layout'];
+        if ($orientation != "horizontal" && $orientation != "vertical")
+        {
+            ?><div id="error"><?php
+            echo "ERROR: Enter a keyword AND select horizontal or vertical";
+            ?></div><?php
+        }
+        else {
+            $imageURLs = getImageURLs($keyword,$orientation);
+            $backgroundImage = $imageURLs[array_rand($imageURLs)];
+        }
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 Requirements                                                                                                            Points
-The main page includes all Form elements (text, radio, select)                                                          20pts
-Seven random images are displayed in the Carousel when submitting the form                                              20pts
-Carousel images are displayed based on the keyword typed or category selected                                           20pts
-Carousel images are displayed based on the layout checked (vertical, horizontal)                                        20pts
-Form validation works properly (a message is displayed when keyword is empty AND category is not selected)	            10pts
+[]The main page includes all Form elements (text, radio, select)                                                          20pts
+[]Seven random images are displayed in the Carousel when submitting the form                                              20pts
+[]Carousel images are displayed based on the keyword typed or category selected                                           20pts
+[]Carousel images are displayed based on the layout checked (vertical, horizontal)                                        20pts
+[]Form validation works properly (a message is displayed when keyword is empty AND category is not selected)	            10pts
 The webpage has a nice look and feel, and a random background image related to the keyword typed or category selected.  10pts
