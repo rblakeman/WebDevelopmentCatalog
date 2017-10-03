@@ -1,5 +1,11 @@
 <?php
-    $backgroundImage = "img/sea.jpg";
+    $backgroundImage = "img/forest.jpg";
+    if ($_GET['category'] == "bay") {
+        $backgroundImage = "img/bae.jpg";
+    }
+    else if ($_GET['category'] == "forest") {
+        $backgroundImage = "img/forest.jpg";
+    }
     include 'api/pixabayAPI.php';
     
     if(isset($_GET['keyword']))
@@ -22,6 +28,7 @@
     <head>
         <title>Image Carousel</title>
         <meta charset="utf-8" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <style>
             @import url("css/style.css");
@@ -84,11 +91,8 @@
             <input type= "radio" id= "lvertical" name = "layout" value = "vertical">
             <label for = "Vertical"></label><label for ="lvertical"> Vertical </label>
             <select name = "category">
-                <option value ="">Select One</option>
-                <option value="ocean">Bay</option>
-                <option>Forest</option>
-                <option>Mars</option>
-                <option>Snow</option>
+                <option value="forest">Forest</option>
+                <option value="bay">Bay</option>
             </select>
             <input type="submit" value="Search"/>
         </form>

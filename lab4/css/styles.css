@@ -6,6 +6,7 @@ body{
 }
 
 input {
+    margin: 0 auto;
     font-size: 3em;
     color: black;
 }
@@ -15,11 +16,11 @@ input {
     width: 700px;
 }
 
-img {
-    margin: 0 auto;
+#error {
+    font-size: 500px;
+    font-weight: bold;
 }
 
-#error {
-    font-size: 1000px;
-    font-weight:bold;
+footer {
+    font-size: 20px;
 }
