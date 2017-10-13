@@ -75,7 +75,7 @@
                 echo 'font-weight:'.$bold.';';
                 echo 'font-style:'.$italic.';';
                 echo 'text-decoration:'.$underline.';';
-                echo 'color: rgb('.$red.', '.$blue.', '.$green.');';
+                echo 'color: rgb('.$red.', '.$green.', '.$blue.');';
             echo '}';
             ?>
         </style>
