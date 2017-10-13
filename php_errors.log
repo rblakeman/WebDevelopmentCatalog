@@ -1,3 +1,0 @@
-[03-Oct-2017 20:12:07 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/cst336-github/lab4/index.php on line 61
-[03-Oct-2017 20:12:07 UTC] PHP Stack trace:
-[03-Oct-2017 20:12:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/lab4/index.php:0
