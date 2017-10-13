@@ -1,4 +1,4 @@
-body{
+body {
     opacity:0.9;
     width:100%;
     text-align:center;
@@ -11,16 +11,37 @@ input {
     color: Gray;
 }
 
-#headtitle {
+#HeadTitle {
     color: black;
+    font-size: 75px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #error {
     color:red;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
+#toprint {
+    width: 450px;
+    margin: 0 auto;
+    background-color: rgb(255, 247, 219);
+    padding: 20px;
+    font-size: 30px;
+}
+
+#InputForm {
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgb(237, 216, 255);
+    padding: 10px;
+}
+
+#InputTitle {
+    color: black;
+}
+
 footer {
-    font-size: 20px;
+    font-size: 15px;
 }
