@@ -103,6 +103,7 @@
             <div id="InputForm"><form>
                 <div id="InputTitle">Please Enter Word and Fill Out Forms</div>
                 <input type="text" name="tex" placeholder="What to print?" value="<?=$_GET['tex']?>"/>
+                <br>
                 <input type = "radio" id = "lefttoright" name = "order" value = "normal">
                     <label for = "normal"></label><label for="lefttoright"> Normal </label>
                 <input type= "radio" id= "righttoleft" name = "order" value = "reversed">
