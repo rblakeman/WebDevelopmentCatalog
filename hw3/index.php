@@ -109,9 +109,9 @@
                     <label for = "reversed"></label><label for ="righttoleft"> Reversed </label>
                 <br>
                 
-                <input type="number" name="red" placeholder="0-255" value="rednum" min="0" max="255"/>Red
-                <input type="number" name="green" placeholder="0-255" value="greennum" min="0" max="255"/>Green
-                <input type="number" name="blue" placeholder="0-255" value="bluenum" min="0" max="255"/>Blue
+                <input type="number" name="red" placeholder="Red" value="rednum" min="0" max="255"/>
+                <input type="number" name="green" placeholder="Green" value="greennum" min="0" max="255"/>
+                <input type="number" name="blue" placeholder="Blue" value="bluenum" min="0" max="255"/>
                 <br>
                 
                 <input type="checkbox" name="bold" value="boldvalue"/>Bold
