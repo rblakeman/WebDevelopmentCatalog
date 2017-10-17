@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+    padding: auto;
+}
+
+#bar {
+    background-color: black;
+    color: white;
+}
+
+#whitecol {
+    color: black;
+    background-color: white;
+}
+#greycol {
+    color: black;
+    background-color: grey;
+}
+
+#names {
+    float: left;
+    text-align: left;
+}
+#types {
+    float: right;
+    position: relative;
+    left: -50%; /* or right 50% */
+    text-align: left
+}
+#available {
+    float: right;
+    text-align: right;
+}
