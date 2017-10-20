@@ -1,11 +1,38 @@
 body {
     margin: 0 auto;
-    padding: auto;
+    padding: 20px;
+}
+
+#Filter {
+    font-weight: bold;
+}
+
+#column2 {
+    float: left;
+    width: 25%;
+    text-decoration: underline;
+}
+/* Clear floats after the columns */
+#row2:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 #bar {
     background-color: black;
-    color: white;
+    color:white;
+}
+
+#column {
+    float: left;
+    width: 25%;
+}
+/* Clear floats after the columns */
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 #whitecol {
@@ -15,19 +42,4 @@ body {
 #greycol {
     color: black;
     background-color: grey;
-}
-
-#names {
-    float: left;
-    text-align: left;
-}
-#types {
-    float: right;
-    position: relative;
-    left: -50%; /* or right 50% */
-    text-align: left
-}
-#available {
-    float: right;
-    text-align: right;
 }
