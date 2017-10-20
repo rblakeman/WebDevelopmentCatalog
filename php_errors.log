@@ -1,5 +1,0 @@
-[20-Oct-2017 07:11:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OR status = 'Available' ORDER BY deviceName ASC' at line 1' in /home/ubuntu/workspace/cst336-github/lab5/index.php:131
-Stack trace:
-#0 /home/ubuntu/workspace/cst336-github/lab5/index.php(131): PDO->query('SELECT * FROM d...')
-#1 {main}
-  thrown in /home/ubuntu/workspace/cst336-github/lab5/index.php on line 131
