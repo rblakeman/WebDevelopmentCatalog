@@ -50,10 +50,12 @@
             $i = 0; # counter
             $tempfilter = array();
             # Filter
-            if (!empty($_GET['name'])); # Name
-                #$dispatch = $dispatch . " deviceName = '" . $_GET['device-name'] . "'";
+            if (!empty($_GET['typedtext'])) {# Name
+                $tempfilter[$i] = " deviceName = '" . $_GET['typedtext'] . "' ";
+                $i++;
+            }
 
-            if ($_GET['available'] == "true") {# Status
+            if ($_GET['available'] == "true") { # Status
                 $tempfilter[$i] = " status = 'Available' ";
                 $i++;
             }
@@ -89,16 +91,26 @@
                 $tempfilter[$i] =  " deviceType = 'Microphone' ";
                 #$i++;
             }
-            for ($j = 0; $j < count($tempfilter); $j++)
+            for ($j = 0; $j < count($tempfilter); $j++) #concat that filter string!
             {
                 if ($j == 0 && !empty($tempfilter[0]))
                 {
                     $dispatch = $dispatch . "WHERE";
                 }
                 $dispatch = $dispatch . $tempfilter[$j];
-                if (!empty($tempfilter[$j+1]))
+                if (strpos($tempfilter[$j], 'deviceName') && !empty($tempfilter[$j+1]))
                 {
-                    $dispatch = $dispatch . " OR";
+                    $dispatch = $dispatch . " AND";
+                }
+                else if (strpos($tempfilter[$j], 'status') && strpos($tempfilter[$j+1],'deviceType'))
+                {
+                    $dispatch = $dispatch . " AND";
+                }
+                else {
+                    if (!empty($tempfilter[$j+1]))
+                    {
+                        $dispatch = $dispatch . " OR";
+                    }
                 }
             }
             
