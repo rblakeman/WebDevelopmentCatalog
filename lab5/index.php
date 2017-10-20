@@ -14,9 +14,9 @@
                     <option value="name">Name</option>
                     <option value="nascending">-->Ascending</option>
                     <option value="ndescending">-->Descending</option>
-                    <option value="type">Price</option>
-                    <option value="tascending">-->Ascending</option>
-                    <option value="tdescending">-->Descending</option>
+                    <option value="price">Price</option>
+                    <option value="pascending">-->Ascending</option>
+                    <option value="pdescending">-->Descending</option>
                 </select>
                 <input type="submit" name="submit" value="Submit">
                 <br>
