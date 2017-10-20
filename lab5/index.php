@@ -126,7 +126,7 @@
             else # Default Case
                 $dispatch = $dispatch . "ORDER BY deviceName ASC";
             
-            echo $dispatch;
+            #echo $dispatch;
             #$dispatch = "SELECT * FROM device ORDER BY deviceName ASC";
             $dbData = $dbConn->query($dispatch);
             $dbArray = $dbData->fetchAll();
