@@ -51,7 +51,7 @@
             $tempfilter = array();
             # Filter
             if (!empty($_GET['typedtext'])) {# Name
-                $tempfilter[$i] = " deviceName = '" . $_GET['typedtext'] . "' ";
+                $tempfilter[$i] = " deviceName LIKE '%" . $_GET['typedtext'] . "%' ";
                 $i++;
             }
 
