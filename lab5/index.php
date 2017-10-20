@@ -47,29 +47,60 @@
             $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $dispatch = "SELECT * FROM device ";
             
+            $i = 0; # counter
+            $tempfilter = array();
             # Filter
             if (!empty($_GET['name'])); # Name
-                #$dispatch = $dispatch . "WHERE deviceName == '" . $_GET['device-name'] . "'";
-            
-            if ($_GET['available'] == "true") # Status
-                $dispatch = $dispatch . "WHERE status == 'Available' OR ";
-            if ($_GET['checkedout'] == "true")
-                $dispatch = $dispatch . "WHERE status == 'CheckedOut' OR ";
-                
-            if ($_GET['tablet'] == "true") # Type
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
-            if ($_GET['camera'] == "true")
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
-            if ($_GET['vrheadset'] == "true")
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
-            if ($_GET['webcam'] == "true")
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
-            if ($_GET['smartphone'] == "true")
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
-            if ($_GET['laptop'] == "true")
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
-            if ($_GET['microphone'] == "true")
-                $dispatch = $dispatch . "WHERE deviceType == available OR ";
+                #$dispatch = $dispatch . " deviceName = '" . $_GET['device-name'] . "'";
+
+            if ($_GET['available'] == "true") {# Status
+                $tempfilter[$i] = " status = 'Available' ";
+                $i++;
+            }
+            if ($_GET['checkedout'] == "true") {
+                $tempfilter[$i] =  " status = 'CheckedOut' ";
+                $i++;
+            }
+            if ($_GET['tablet'] == "true") { # Type
+                $tempfilter[$i] = " deviceType = 'Tablet' ";
+                $i++;
+            }
+            if ($_GET['camera'] == "true") {
+                $tempfilter[$i] =  " deviceType = 'Camera' ";
+                $i++;
+            }
+            if ($_GET['vrheadset'] == "true") {
+                $tempfilter[$i] =  " deviceType = 'VR Headset' ";
+                $i++;
+            }
+            if ($_GET['webcam'] == "true") {
+                $tempfilter[$i] =  " deviceType = 'Webcam' ";
+                $i++;
+            }
+            if ($_GET['smartphone'] == "true")  {
+                $tempfilter[$i] =  " deviceType = 'Smartphone' ";
+                $i++;
+            }
+            if ($_GET['laptop'] == "true")  {
+                $tempfilter[$i] =  " deviceType = 'Laptop' ";
+                $i++;
+            }
+            if ($_GET['microphone'] == "true") {
+                $tempfilter[$i] =  " deviceType = 'Microphone' ";
+                #$i++;
+            }
+            for ($j = 0; $j < count($tempfilter); $j++)
+            {
+                if ($j == 0 && !empty($tempfilter[0]))
+                {
+                    $dispatch = $dispatch . "WHERE";
+                }
+                $dispatch = $dispatch . $tempfilter[$j];
+                if (!empty($tempfilter[$j+1]))
+                {
+                    $dispatch = $dispatch . " OR";
+                }
+            }
             
             # Sort
             if ($_GET['sort'] == "name" || $_GET['sort'] == "nascending") # Name
