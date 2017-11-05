@@ -65,12 +65,13 @@
                     {
                         ?><span id="grey"><?php
                     }
+                    echo $dbArray2[$i]['firstName']." ".$dbArray2[$i]['lastName'];
                     ?><span id="ids"><?php
-                    echo $dbArray2[$i]['id'];
+                    echo " id:".$dbArray2[$i]['id'];
                     ?></span><?php
-                    echo " ".$dbArray2[$i]['firstName']." ".$dbArray2[$i]['lastName']." ";
-                    echo "[<a href='updateuser.php?userId=".$dbArray2[$i]['id']."'>Update</a>]";
-                    echo "[<a onclick='return confirmDelete()' href='deleteuser.php?userId=".$dbArray2[$i]['id']."'>Delete</a>] <br />";
+                    echo " "."[<a href='updateuser.php?userId=".$dbArray2[$i]['id']."'>Update</a>]";
+                    echo "[<a onclick='return confirmDelete()' href='deleteuser.php?userId=".$dbArray2[$i]['id']."'>Delete</a>]<br/>";
+
                     echo "<br>";
                     if ($i % 2 == 0)
                     {

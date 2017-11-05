@@ -1,6 +1,7 @@
 #title {
     font-weight: bold;
     font-family: 'Pacifico', cursive;
+    text-align: center;
 }
 
 #Error {
@@ -18,8 +19,14 @@
 #ids {
     font-style: italic;
     font-family: 'Press Start 2P', none;
+    font-size: 10px;
+    font-weight: none;
 }
 
 #grey {
     background-color: #c2c2c2;
+}
+
+body {
+    text-align: center;
 }
