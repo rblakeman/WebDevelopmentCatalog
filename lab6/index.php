@@ -25,6 +25,7 @@
             $dbArray = $dbData->fetchAll();
             
             $auth = $_SESSION['auth'];
+            echo $auth;
             if (isset($_POST['submit']) && !$auth)
             {
                 $isset = true;
