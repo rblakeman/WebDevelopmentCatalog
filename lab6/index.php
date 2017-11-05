@@ -10,7 +10,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div id="title">Lab 6</div>
+        <div id="title">Login</div>
         <br>
         <nav>
             <?php

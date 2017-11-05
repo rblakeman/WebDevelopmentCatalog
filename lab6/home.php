@@ -8,6 +8,8 @@
         <title>Lab 6</title>
         <meta charset="utf-8" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     </head>
     <body>
         <div id="title">Lab 6</div>
@@ -30,10 +32,6 @@
             $dbArray1 = $dbData1->fetchAll();
             
             $auth = $_SESSION['auth'];
-            if (true) //debug mode
-            {
-                $auth = true;
-            }
             if ($auth)
             {
                 $fname = $_SESSION['fname'];
@@ -67,7 +65,7 @@
                     {
                         ?><span id="grey"><?php
                     }
-                    ?><span id="Italic"><?php
+                    ?><span id="ids"><?php
                     echo $dbArray2[$i]['id'];
                     ?></span><?php
                     echo " ".$dbArray2[$i]['firstName']." ".$dbArray2[$i]['lastName']." ";

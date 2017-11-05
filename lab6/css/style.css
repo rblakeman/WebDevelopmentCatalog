@@ -1,5 +1,6 @@
 #title {
     font-weight: bold;
+    font-family: 'Pacifico', cursive;
 }
 
 #Error {
@@ -14,8 +15,9 @@
     text-decoration: underline;
 }
 
-#Italic {
+#ids {
     font-style: italic;
+    font-family: 'Press Start 2P', none;
 }
 
 #grey {
