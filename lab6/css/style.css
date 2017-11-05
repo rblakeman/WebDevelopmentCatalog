@@ -1,3 +1,23 @@
+#title {
+    font-weight: bold;
+}
+
 #Error {
     color: red;
+}
+
+#Success {
+    color: green;
+}
+
+#Underline {
+    text-decoration: underline;
+}
+
+#Italic {
+    font-style: italic;
+}
+
+#grey {
+    background-color: #c2c2c2;
 }

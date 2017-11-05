@@ -54,7 +54,7 @@
                     }
                     if ($i == sizeof($dbArray)-1)
                     {
-                        echo "No Records of that Username was found<br>";
+                        ?><div id="Error">No Records of that Username were found</div><?php
                         $auth = $_SESSION['auth'] = false;
                     }
                 }
