@@ -21,11 +21,11 @@
             </script>
         <nav>
             <?php
-            $host = 'localhost';
-            $dbname = 'tech_devices_app';
-            $dbusername = 'root';
-            #$dbpassword = '1cff1392';
-            $dbConn = new PDO("mysql:host=$host; dbname=$dbname", $dbusername);
+            $host = 'us-cdbr-iron-east-05.cleardb.net';
+            $dbname = 'heroku_802d0206eb50421';
+            $username = 'b589bb7b7cae8b';
+            $password = '1cff1392';
+            $dbConn = new PDO("mysql:host=$host; dbname=$dbname", $username, $password);
             $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $dispatch1 = "SELECT * FROM Admin";
             $dbData1 = $dbConn->query($dispatch1);

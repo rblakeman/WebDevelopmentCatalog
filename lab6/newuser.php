@@ -16,11 +16,11 @@
             <?php
             if (isset($_GET['addUser']))
             {
-                $host = 'localhost';
-                $dbname = 'tech_devices_app';
-                $dbusername = 'root';
-                #$dbpassword = '1cff1392';
-                $dbConn = new PDO("mysql:host=$host; dbname=$dbname", $dbusername);
+                $host = 'us-cdbr-iron-east-05.cleardb.net';
+                $dbname = 'heroku_802d0206eb50421';
+                $username = 'b589bb7b7cae8b';
+                $password = '1cff1392';
+                $dbConn = new PDO("mysql:host=$host; dbname=$dbname", $username, $password);
                 $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
                 $np = array();
@@ -32,9 +32,9 @@
                 $np[':deptId'] = $_GET['deptId'];
                 
                 $sql = "INSERT INTO User
-                        (firstName, lastName, email, role, phone, deptId) 
+                        (firstName, lastName, email, phone, role, deptId) 
                         VALUES
-                        (:fName, :lName, :email, :role, :phone, :deptId)";
+                        (:fName, :lName, :email, :phone, :role, :deptId)";
                 
                 $stmt=$dbConn->prepare($sql);
                 $stmt->execute($np);
