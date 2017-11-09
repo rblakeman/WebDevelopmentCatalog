@@ -15,6 +15,7 @@
             <li> <a href="lab4/index.php">Lab 4</a> </li>
             <li> <a href="lab5/index.php">Lab 5</a> </li>
             <li> <a href="lab6/index.php">Lab 6</a> </li>
+            <li> <a href="lab7/index.html">Lab 7</a> </li>
             <p></p>
         </u1>
         <u1 id:"hwmenu">
