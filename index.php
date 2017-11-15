@@ -23,6 +23,12 @@
             <li> <a href="hw1/index.html">Homework 1</a> </li>
             <li> <a href="hw2/index.php">Homework 2</a> </li>
             <li> <a href="hw3/index.php">Homework 3</a> </li>
+            <p></p>
+        </u1>
+        
+        <u1 id:"projectmenu">
+            Projects
+            <li> <a href="TeamProject/index.php">TeamProject</a> </li>
         </u1>
     </body>
 </html>

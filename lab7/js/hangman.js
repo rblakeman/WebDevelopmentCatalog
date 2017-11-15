@@ -10,7 +10,7 @@ var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
                 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 // Begin the game when the page is fully loaded
-window.onload = startGame();
+window.onload = startGame;
 
 function startGame() {
     pickWord();
