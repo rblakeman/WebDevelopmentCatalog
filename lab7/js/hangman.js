@@ -10,11 +10,12 @@ var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
                 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 // Begin the game when the page is fully loaded
-window.onload = startGame;
+startGame();
 
 function startGame() {
     pickWord();
     initBoard();
+    createLetters();
     updateBoard();
 }
 
@@ -125,4 +126,3 @@ $(".replayBtn").on("click", function() {
     location.reload();
 })
 
-initBoard();
