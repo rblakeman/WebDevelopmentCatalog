@@ -2,6 +2,7 @@ var selectedWord = "";
 var selectedHint = "";
 var board = "";
 var remainingGuesses = 6;
+var showHint = false;
 var words = [{ word: "snake", hint: "It's a reptile" },
              { word: "monkey", hint: "It's a mammal" },
              { word: "beetle", hint: "It's an insect" }];
@@ -33,6 +34,7 @@ function pickWord() {
 }
 
 function createLetters() {
+    $("#hint").append("<button class='hint' id='hint'>Hint</button>");
     for (var letter of alphabet) {
         $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>");
     }
@@ -88,8 +90,11 @@ function updateBoard() {
         document.getElementById("word").innerHTML += letter + " ";
     }
     
-    $("#word").append("<br />");
-    $("#word").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+    if (showHint)
+    {
+        $("#word").append("<br />");
+        $("#word").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+    }
 }
 
 function updateMan() {
@@ -112,15 +117,20 @@ function disableButton(btn) {
     btn.attr("class", "btn btn-danger");
 }
 
+function hideButton() {
+    $("#hint").hide();
+    showHint = true;
+    updateBoard();
+}
+
+$(".hint").click(function(){
+    hideButton();
+});
+
 $(".letter").click(function(){
     checkLetter($(this).attr("id"));
     disableButton($(this));
 });
-
-$("letterBtn").click(function() {
-    var boxVal = $("#letterBox").val();
-    console.log("You pressed the button and it had the value: " + boxVal);
-})
 
 $(".replayBtn").on("click", function() {
     location.reload();
