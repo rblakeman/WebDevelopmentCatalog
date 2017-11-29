@@ -35,7 +35,7 @@ function calculateScore() {
         {
             score += point;
         }
-        $('#Score').append(score);
+        $('#Points').append(score);
         average = score/amount;
         $('#Average').append(average+' from '+amount+' numbers');
         

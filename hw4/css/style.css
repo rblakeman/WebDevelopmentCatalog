@@ -10,35 +10,39 @@ nav {
     color:black;
     text-decoration: underline;
 }
+
+header h4 {
+    font-family: 'Indie Flower', cursive;
+}
+#Button {
+    color: blue;
+}
+
 #Button img {
     max-width: 125px;
 }
 
-.clickHyperlink {
-    font-family: 'Indie Flower', cursive;
-}
-
-#points {
+#Points, #Point {
     color: red;
     text-decoration: underline;
 }
 
-#numbers {
+#Average {
     color: green;
     font-style: italic;
 }
 
-#haroldimg img {
-    border: 3px solid fuchsia;
+#Harold img {
+    border: 3px solid blue;
     margin: auto;
     max-width: 1000px;
 }
 
-#limitededition {
+#LimitedEdition {
     font-family: 'Pacifico', cursive;
     color: darkGray;
 }
 
-#picturecaption {
+#Caption {
     font-size: 10px;
 }
