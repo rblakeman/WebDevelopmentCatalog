@@ -1,6 +1,7 @@
 var amount = 0;
-var result;
+var result = [];
 var score = 0;
+var average = 0;
 var haroldnum = 0;
 var harolds = ['img/harold1.png', 'img/harold2.png', 'img/harold3.png', 'img/harold4.png', 'img/harold5.png'];
 
@@ -17,38 +18,44 @@ function calculateScore() {
     
     if (amount == 0) {
         zeroResult(true);
+        $('#Score').append("0");
     }
     else {
         zeroResult(false);
         
         for (var i = 0; i < amount; i++)
         {
-            result.append(getRandomInt(0,100));
-            $('#Points').append(result[result.length-1]);
-            $('#Points').append(' ');
+            result.push(getRandomInt(0,100));
+            //$('#Debug').append(result.length);
+            $('#List').append(result[result.length-1]);
+            $('#List').append(' ');
         }
         
-        for (var points in result)
+        for (var point of result)
         {
-            //score += points;
+            score += point;
         }
+        $('#Score').append(score);
+        average = score/amount;
+        $('#Average').append(average+' from '+amount+' numbers');
         
-        showPrize(score%5);
+        showPrize((score%5)+1);
     }
 }
 
 function zeroResult(iszero) {
     if (iszero) {
         $('#Zero').show();
+        $('#Average').hide();
     } else {
         $('#Zero').hide();
+        $('#Average').show();
     }
 }
 
 function showPrize(num) {
-    $('#Harold').append('<img src="img/harold');
-    $('#Harold').append('num');
-    $('#Harold').append('.png"/>');
+    $('#Card').append(num);
+    $('#Harold').append('<img src="img/harold'+num+'.png"/>');
 }
 
 function getRandomInt(min, max) {
