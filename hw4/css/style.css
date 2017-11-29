@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    background: cyan;
+}
+header {
+    font-size: 30px;
+}
+nav {
+    font-size: 20px;
+    color:black;
+    text-decoration: underline;
+}
+#Button img {
+    max-width: 125px;
+}
+
+.clickHyperlink {
+    font-family: 'Indie Flower', cursive;
+}
+
+#points {
+    color: red;
+    text-decoration: underline;
+}
+
+#numbers {
+    color: green;
+    font-style: italic;
+}
+
+#haroldimg img {
+    border: 3px solid fuchsia;
+    margin: auto;
+    max-width: 1000px;
+}
+
+#limitededition {
+    font-family: 'Pacifico', cursive;
+    color: darkGray;
+}
+
+#picturecaption {
+    font-size: 10px;
+}

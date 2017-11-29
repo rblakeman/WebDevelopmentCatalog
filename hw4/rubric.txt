@@ -1,0 +1,7 @@
+Adapt your Assignments 2 or 3 to use both JavaScript and jQuery instead of PHP.
+Feel free to improve your revised version.
+
+Rubric:
+Program uses some of the elements used in Assignments 2 or 3 (conditions, loops, arrays, form elements) (60 pts)
+Program uses both JavaScript and jQuery (20 pts)
+Program uses Bootstrap (20 pts)
