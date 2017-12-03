@@ -1,0 +1,9 @@
+1) City, longitude and latitude are updated when entering a zip code (15 pts)
+2) A "Zip code not found" message is displayed next to its text box, if that's the case (15 pts)
+2) The list of counties is updated properly when selecting a State (15 pts)
+3) A color-coded message indicates whether the username is available or not (20 pts)
+4) There is validation for Password matching "Retype Password". 
+    The validation should take place when submitting the form.  (15 pts)
+     You don't need to add a new record to the database.
+5) Page has a nice look and feel (uses Bootstrap or includes 20 CSS rules) (10 pts)
+6) You submit a clickable link to the lab in Heroku (10 pts)

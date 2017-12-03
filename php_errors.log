@@ -1,0 +1,18 @@
+[03-Dec-2017 05:08:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'' in /home/ubuntu/workspace/cst336-github/lab8/api.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/lab8/api.php(20): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/lab8/api.php(34): getUsersThatMatchUserName()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/lab8/api.php on line 20
+[03-Dec-2017 05:14:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'' in /home/ubuntu/workspace/cst336-github/lab8/api.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/lab8/api.php(20): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/lab8/api.php(34): getUsersThatMatchUserName()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/lab8/api.php on line 20
+[03-Dec-2017 05:16:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'' in /home/ubuntu/workspace/cst336-github/lab8/api.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/lab8/api.php(20): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/lab8/api.php(34): getUsersThatMatchUserName()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/lab8/api.php on line 20

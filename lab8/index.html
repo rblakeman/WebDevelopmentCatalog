@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <title>Lab 8</title>
+
+    </head>
+    
+    <body id="signupform">
+        <h1> Sign Up Form </h1>
+        <form onsubmit="return false;">
+            <fieldset>
+               <legend>Sign Up</legend>
+                First Name:  <input type="text"><br> 
+                Last Name:   <input type="text"><br> 
+                Email:       <input type="text"><br> 
+                Phone Number:<input type="text"><br><br>
+                Zip Code:    <input id="zip" onchange="getCityInfo();" type="text"> <span id="zip-code-error-msg"></span></span><br>
+                City:  <span id="city"></span>
+                <br>
+                Latitude: <span id="lon"></span>
+                <br>
+                Longitude: <span id="lat"></span>
+                <br><br>
+                State: 
+                <select onchange="getCountyInfo();" id="stateList" name="stateList">
+                    <option value="ca">California</option>
+                    <option value="nv">Nevada</option>
+                    <option value="wa">Washington</option>
+                    <option value="or">Oregon</option>
+                </select>
+                Select a County: <select id="county-list"></select><br>
+                
+                Desired Username: <input onchange="validateUsername();" id='username' type="text"> <span id="username-valid"></span></span><br>
+                Password: <input type="password"><br>
+                Type Password Again: <input type="password"><br>
+                <input type="submit" value="Sign up!">
+            </fieldset>
+        </form>
+    </body>
+    
+    <body>
+        <h2> Taken Usernames for demo </h2>
+        rblakeman
+        testuser
+    </body>
+    
+    <footer>
+        <br>
+        <hr>
+        CST 336. 2017&copy; Blakeman <br />
+        <strong>Disclaimer:</strong> The information is used for academic purposes only. <br />
+    </footer>
+</html>
