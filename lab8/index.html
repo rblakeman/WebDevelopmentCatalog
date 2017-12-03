@@ -3,7 +3,31 @@
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <title>Lab 8</title>
-
+                
+        <script>
+            function getCityInfo() {
+                 $.ajax({
+                    type: "get",
+                    url: "http://hosting.otterlabs.org/laramiguel/ajax/zip.php",
+                    dataType: "json",
+                    data: {
+                        "zip_code": $("#zip").val()
+                    },
+                    success: function(data,status) {
+                        console.log(data); 
+                        $("#zip-code-error-msg").html("");
+                        if (!data.city) {
+                            $("#zip-code-error-msg").html("Zip code is invalid"); 
+                            return; 
+                        }
+                        
+                        $("#city").html(data.city);
+                        $("#lon").html(data.longitude);
+                        $("#lat").html(data.latitude);
+                    },
+                 });
+            }
+        </script>
     </head>
     
     <body id="signupform">
