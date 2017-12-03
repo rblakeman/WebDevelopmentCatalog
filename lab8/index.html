@@ -42,6 +42,27 @@
                     },
                 });
             }
+            function validateUsername()
+            {
+                $.ajax({
+                    type: "get",
+                    url: "api.php",
+                    dataType: "json",
+                    data: {
+                        'username': $('#username').val(),
+                        'action': 'validate-username'
+                    },
+                    success: function(data,status) {
+                        debugger;
+                        if (data.length > 0) {
+                            $('#username-valid').html("Username is not available"); 
+                        }
+                        else {
+                            $('#username-valid').html("Username is available");
+                        }
+                    },
+                });
+            }
         </script>
     </head>
     
