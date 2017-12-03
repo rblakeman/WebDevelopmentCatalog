@@ -2,6 +2,7 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
         <title>Lab 8</title>
                 
         <script>
@@ -55,10 +56,12 @@
                     success: function(data,status) {
                         debugger;
                         if (data.length > 0) {
-                            $('#username-valid').html("Username is not available"); 
+                            $('#username-invalid').html("Username is not available");
+                            $('#username-valid').empty();
                         }
                         else {
                             $('#username-valid').html("Username is available");
+                            $('#username-invalid').empty();
                         }
                     },
                 });
@@ -75,7 +78,7 @@
                 Last Name:   <input type="text"><br> 
                 Email:       <input type="text"><br> 
                 Phone Number:<input type="text"><br><br>
-                Zip Code:    <input id="zip" onchange="getCityInfo();" type="text"> <span id="zip-code-error-msg"></span></span><br>
+                Zip Code:    <input id="zip" onchange="getCityInfo();" type="text"> <span id="zip-code-error-msg"></span><br>
                 City:  <span id="city"></span>
                 <br>
                 Latitude: <span id="lon"></span>
@@ -91,7 +94,7 @@
                 </select>
                 Select a County: <select id="county-list"></select><br>
                 
-                Desired Username: <input onchange="validateUsername();" id='username' type="text"> <span id="username-valid"></span></span><br>
+                Desired Username: <input onchange="validateUsername();" id='username' type="text"> <span id="username-valid"></span><span id="username-invalid"></span><br>
                 Password: <input type="password"><br>
                 Type Password Again: <input type="password"><br>
                 <input type="submit" value="Sign up!">

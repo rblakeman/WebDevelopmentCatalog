@@ -1,0 +1,15 @@
+#zip-code-error-msg {
+    color: red;
+}
+
+#city, #lon, #lat {
+    color: green;
+}
+
+#username-invalid {
+    color: red;
+}
+
+#username-valid {
+    color: green;
+}
