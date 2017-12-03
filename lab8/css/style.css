@@ -1,12 +1,24 @@
 #signupform {
     text-align: center;
-    border-style: solid;
-}
-#takenusernames {
-    text-align: center;
-    border-style: dotted;
+    border-style: groove;
 }
 
+#takenusernames {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    width: 45%;
+}
+
+footer {
+    text-align: center;
+}
 
 #zip-code-error-msg {
     color: red;
