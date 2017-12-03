@@ -1,15 +1,29 @@
+#signupform {
+    text-align: center;
+    border-style: solid;
+}
+#takenusernames {
+    text-align: center;
+    border-style: dotted;
+}
+
+
 #zip-code-error-msg {
     color: red;
 }
-
 #city, #lon, #lat {
     color: green;
 }
 
+
 #username-invalid {
     color: red;
 }
-
 #username-valid {
     color: green;
+}
+
+
+#usernames {
+    color: blue;
 }

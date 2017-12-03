@@ -19,6 +19,9 @@
                         $("#zip-code-error-msg").html("");
                         if (!data.city) {
                             $("#zip-code-error-msg").html("Zip code is invalid"); 
+                            $("#city").empty();
+                            $("#lon").empty();
+                            $("#lat").empty();
                             return; 
                         }
                         
@@ -60,7 +63,7 @@
                             $('#username-valid').empty();
                         }
                         else {
-                            $('#username-valid').html("Username is available");
+                            $('#username-valid').html("Username is taken");
                             $('#username-invalid').empty();
                         }
                     },
@@ -102,10 +105,9 @@
         </form>
     </body>
     
-    <body>
-        <h2> Taken Usernames for demo </h2>
-        rblakeman
-        testuser
+    <body id="takenusernames">
+        <strong>Taken Usernames for demo:</strong>
+        <span id="usernames">rblakeman</span> & <span id="usernames">testuser</span>
     </body>
     
     <footer>
