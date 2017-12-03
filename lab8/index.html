@@ -27,6 +27,21 @@
                     },
                  });
             }
+                        
+            function getCountyInfo() {
+                $.ajax({
+                    type: "get",
+                    url: "http://hosting.otterlabs.org/laramiguel/ajax/countyList.php",
+                    dataType: "json",
+                    data: {"state": $("#stateList").val()},
+                    success: function(data,status) {
+                        $("#county-list").html("");
+                        for (var i = 0; i < data.counties.length; i++) {
+                            $("#county-list").append("<option>" + data.counties[i].county + "</option>");
+                        }
+                    },
+                });
+            }
         </script>
     </head>
     
