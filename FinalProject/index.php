@@ -8,7 +8,7 @@
     </head>
     <body>
         <nav>
-            <form method="sumbit">
+            <form method="post">
                 <span id="Filter"><strong>Sort - </strong></span>
                 <select name = "sorttype">
                     <option value="name">Name</option>
@@ -27,8 +27,8 @@
                 <br>
                 <strong>Platform:</strong>
                 <input type="checkbox" name="pc" value="true">PC
-                <input type="checkbox" name="ps4" value="true">PS4
                 <input type="checkbox" name="switch" value="true">Switch
+                <input type="checkbox" name="ps4" value="true">PS4
                 <input type="checkbox" name="wiiu" value="true">WiiU
                 <br>
             </form>
@@ -42,15 +42,27 @@
             $tempfilter = array();
             # Filter
             if (!empty($_POST['typedtext'])) {# Name
-                $tempfilter[$i] = " title LIKE '%" . $_POST['typedtext'] . "%' ";
+                $tempfilter[$i] = " name LIKE '%" . $_POST['typedtext'] . "%' ";
                 $i++;
             }
-            if ($_POST['action'] == "true") { # Action
-                $tempfilter[$i] = " genre = 'Action' ";
+            if ($_POST['pc'] == "true") { # pc
+                $tempfilter[$i] = " platform = 1 ";
+                $i++;
+            }
+            if ($_POST['switch'] == "true") { # switch
+                $tempfilter[$i] = " platform = 11 ";
+                $i++;
+            }
+            if ($_POST['ps4'] == "true") { # ps4
+                $tempfilter[$i] = " platform = 21 ";
+                $i++;
+            }
+            if ($_POST['wiiu'] == "true") { # wiiu
+                $tempfilter[$i] = " platform = 31 ";
                 $i++;
             }
             if ($_POST['year'] != null){
-                $tempfilter[$i] = " yearReleased = ".$_POST['year']." ";
+                $tempfilter[$i] = " year = ".$_POST['year']." ";
                 $i++;
             }
             
@@ -78,13 +90,20 @@
             }
             # Sort
             if ($_POST['sorttype'] == "name" && $_POST['sortorder'] == "ascending") # Name
-                $dispatch = $dispatch . "ORDER BY title ASC";
+                $dispatch = $dispatch . "ORDER BY name ASC";
             else if ($_POST['sorttype'] == "name" && $_POST['sortorder'] == "descending")
-                $dispatch = $dispatch . "ORDER BY title DESC";
-        
+                $dispatch = $dispatch . "ORDER BY name DESC";
+            else if ($_POST['sorttype'] == "year" && $_POST['sortorder'] == "ascending")
+                $dispatch = $dispatch . "ORDER BY year ASC";
+            else if ($_POST['sorttype'] == "year" && $_POST['sortorder'] == "descending")
+                $dispatch = $dispatch . "ORDER BY year DESC";
+            else if ($_POST['sorttype'] == "price" && $_POST['sortorder'] == "ascending")
+                $dispatch = $dispatch . "ORDER BY price ASC";
+            else if ($_POST['sorttype'] == "price" && $_POST['sortorder'] == "descending")
+                $dispatch = $dispatch . "ORDER BY price DESC";
         
             include 'php/api.php';
-            $statement = "games";
+            $statement = "games ".$dispatch;
             $dbArray = getData($statement);
             
             foreach($dbArray as $result) {
