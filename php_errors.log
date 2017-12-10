@@ -1,18 +1,60 @@
-[03-Dec-2017 05:08:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'' in /home/ubuntu/workspace/cst336-github/lab8/api.php:20
+[10-Dec-2017 08:11:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
 Stack trace:
-#0 /home/ubuntu/workspace/cst336-github/lab8/api.php(20): PDOStatement->execute()
-#1 /home/ubuntu/workspace/cst336-github/lab8/api.php(34): getUsersThatMatchUserName()
-#2 {main}
-  thrown in /home/ubuntu/workspace/cst336-github/lab8/api.php on line 20
-[03-Dec-2017 05:14:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'' in /home/ubuntu/workspace/cst336-github/lab8/api.php:20
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:19:40 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
 Stack trace:
-#0 /home/ubuntu/workspace/cst336-github/lab8/api.php(20): PDOStatement->execute()
-#1 /home/ubuntu/workspace/cst336-github/lab8/api.php(34): getUsersThatMatchUserName()
-#2 {main}
-  thrown in /home/ubuntu/workspace/cst336-github/lab8/api.php on line 20
-[03-Dec-2017 05:16:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'' in /home/ubuntu/workspace/cst336-github/lab8/api.php:20
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:42:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
 Stack trace:
-#0 /home/ubuntu/workspace/cst336-github/lab8/api.php(20): PDOStatement->execute()
-#1 /home/ubuntu/workspace/cst336-github/lab8/api.php(34): getUsersThatMatchUserName()
-#2 {main}
-  thrown in /home/ubuntu/workspace/cst336-github/lab8/api.php on line 20
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:44:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:47:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:47:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:48:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:48:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:48:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:48:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:48:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47
+[10-Dec-2017 09:48:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php:47
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/index.php(47): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 47

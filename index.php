@@ -31,6 +31,7 @@
         <u1 id:"projectmenu">
             Projects
             <li> <a href="TeamProject/index.php">TeamProject</a> </li>
+            <li> <a href="FinalProject/index.php">FinalProject</a> </li>
         </u1>
     </body>
 </html>
