@@ -32,8 +32,42 @@
         <a href="index.php">Log Out</a>
     </head>
     <body>
-        <form>
+        <form method="get">
+            <input type='submit' name='newid' value="Add New Game" formaction='update.php'>
+        <?php
+            include 'php/api.php';
+            $statement = "games";
+            $dbArray = getData($statement);
             
+            foreach($dbArray as $result) {
+                echo "<div id='row'>";
+                echo "<span id='platform'><img src='logo/";
+                    if ($result['platform'] == 1)
+                        echo "pclogo";
+                    else if ($result['platform'] == 11)
+                        echo "switchlogo";
+                    else if ($result['platform'] == 21)
+                        echo "ps4logo";
+                    else if ($result['platform'] == 31)
+                        echo "wiiulogo";
+                echo ".png' width=42 height=42></span>";
+                echo "<span id='name'> ".$result['name']." </span>";
+                echo "<span id='year'> ".$result['year']." </span>";
+                echo "<span id='esrb'><img src='esrb/";
+                    if ($result['esrb'] == 1)
+                        echo "e";
+                    else if ($result['esrb'] == 11)
+                        echo "e10";
+                    else if ($result['esrb'] == 21)
+                        echo "t";
+                    else if ($result['esrb'] == 31)
+                        echo "m";
+                echo ".png' width=34 height=48></span>";
+                echo "<span id='price'> $".$result['price']." </span>";
+                ?><input type='submit' name='updateid' value="<?=$_GET['id']=$result['id']?>" formaction='update.php'><?php
+                echo "</div>";
+            }
+        ?>
         </form>
     </body>
     <footer>

@@ -132,19 +132,6 @@
                 #echo $dispatch."<br>";
                 echo "<br>";
                 #print_r($_SESSION);
-                /*?><strong>Title</strong> (Year) Genre <i>Runtime</i><br> <?php
-                for ($i = 0; $i < sizeof($dbArray); $i++)
-                {
-                    echo '<span class="movielist">';
-                    echo "<strong><td class='movielist'><a href=\"info.php?name=".$dbArray[$i]['title']. "&id=" .$dbArray[$i]['movieID']."\">" . $dbArray[$i]['title'] ."</a></td></strong>";
-                    //echo "<strong>".$dbArray[$i]['title']."</strong> ";
-                    echo " (".$dbArray[$i]['yearReleased'].") ";
-                    echo $dbArray[$i]['genre']." ";
-                    echo "<i>".$dbArray[$i]['runtime']."min</i> ";
-                    echo '</span>';
-                    echo '<form><button class="btn btn-info" name="addToCart" value="'.$dbArray[$i]['title'].'">Add to Cart</button></form>';
-                    echo "<br>";
-                }*/
                 
                 //This is just a foreach version of the above loop
                 echo "<table align='center' id=\"t1\">

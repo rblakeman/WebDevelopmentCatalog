@@ -35,27 +35,86 @@
         </nav>
         
         <span id="categories">
-            
         </span>
         <span id='games'>
         <?php
+            $i = 0; # counter
+            $tempfilter = array();
+            # Filter
+            if (!empty($_POST['typedtext'])) {# Name
+                $tempfilter[$i] = " title LIKE '%" . $_POST['typedtext'] . "%' ";
+                $i++;
+            }
+            if ($_POST['action'] == "true") { # Action
+                $tempfilter[$i] = " genre = 'Action' ";
+                $i++;
+            }
+            if ($_POST['year'] != null){
+                $tempfilter[$i] = " yearReleased = ".$_POST['year']." ";
+                $i++;
+            }
+            
+            for ($j = 0; $j < count($tempfilter); $j++) #concat that filter string!
+            {
+                if ($j == 0 && !empty($tempfilter[0]))
+                {
+                    $dispatch = $dispatch . "WHERE";
+                }
+                $dispatch = $dispatch . $tempfilter[$j];
+                if (strpos($tempfilter[$j], 'title') && !empty($tempfilter[$j+1]))
+                {
+                    $dispatch = $dispatch . " AND";
+                }
+                else if (strpos($tempfilter[$j], 'genre') && strpos($tempfilter[$j+1],'yearReleased'))
+                {
+                    $dispatch = $dispatch . " AND";
+                }
+                else {
+                    if (!empty($tempfilter[$j+1]))
+                    {
+                        $dispatch = $dispatch . " OR";
+                    }
+                }
+            }
+            # Sort
+            if ($_POST['sorttype'] == "name" && $_POST['sortorder'] == "ascending") # Name
+                $dispatch = $dispatch . "ORDER BY title ASC";
+            else if ($_POST['sorttype'] == "name" && $_POST['sortorder'] == "descending")
+                $dispatch = $dispatch . "ORDER BY title DESC";
+        
+        
             include 'php/api.php';
-            $dbConn = getDatabaseConnection(); 
-            $sql = "SELECT * from ".$sql;
+            $statement = "games";
+            $dbArray = getData($statement);
             
-            $statement = $dbConn->prepare($sql); 
-            $statement->execute(); 
-            $records = $statement->fetchAll();
-            
-            /*foreach($dbArray as $result) {
-                echo "<span id='platform'>".$result['platform']."</span>"
-                echo "<span id='name'>".$result['name']."</span>"
-                echo "<span id='genre'></span>"
-                echo "<span id='esrb'></span>"
-                echo "<span id='price'></span>"
+            foreach($dbArray as $result) {
+                echo "<div id='row'>";
+                echo "<span id='platform'><img src='logo/";
+                    if ($result['platform'] == 1)
+                        echo "pclogo";
+                    else if ($result['platform'] == 11)
+                        echo "switchlogo";
+                    else if ($result['platform'] == 21)
+                        echo "ps4logo";
+                    else if ($result['platform'] == 31)
+                        echo "wiiulogo";
+                echo ".png' width=42 height=42></span>";
+                echo "<span id='name'> ".$result['name']." </span>";
+                echo "<span id='year'> ".$result['year']." </span>";
+                echo "<span id='esrb'><img src='esrb/";
+                    if ($result['esrb'] == 1)
+                        echo "e";
+                    else if ($result['esrb'] == 11)
+                        echo "e10";
+                    else if ($result['esrb'] == 21)
+                        echo "t";
+                    else if ($result['esrb'] == 31)
+                        echo "m";
+                echo ".png' width=34 height=48></span>";
+                echo "<span id='price'> $".$result['price']." </span>";
+                echo "</div>";
                 
-            }*/
-
+            }
         ?>
         </span>
     </body>
