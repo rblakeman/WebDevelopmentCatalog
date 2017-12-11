@@ -12,6 +12,7 @@
         
         <a href="login.php">Log In</a>
     </head>
+    
     <body>
         <header> Home </header>
         <nav>
@@ -110,6 +111,7 @@
             $statement = "games ".$dispatch;
             $dbArray = getData($statement);
         ?>
+        
         <table class="table">
             <thead>
               <tr>
@@ -121,41 +123,41 @@
               </tr>
             </thead>
             <tbody>
-        <?php
-            foreach($dbArray as $result) {
-                echo "<tr";
-                    if ($result['platform'] == 1) {
-                        echo " class='active'>";
-                        echo "<td><img src='logo/pclogo";
-                    }
-                    else if ($result['platform'] == 11) {
-                        echo " class='danger'>";
-                        echo "<td><img src='logo/switchlogo";
-                    }
-                    else if ($result['platform'] == 21) {
-                        echo " class='info'>";
-                        echo "<td><img src='logo/ps4logo";
-                    }
-                    else if ($result['platform'] == 31) {
-                        echo ">";
-                        echo "<td><img src='logo/wiiulogo";
-                    }
-                echo ".png' width=42 height=42></td>";
-                echo "<td>".$result['name']."</td>";
-                echo "<td>".$result['year']."</td>";
-                echo "<td><img src='esrb/";
-                    if ($result['esrb'] == 1)
-                        echo "e";
-                    else if ($result['esrb'] == 11)
-                        echo "e10";
-                    else if ($result['esrb'] == 21)
-                        echo "t";
-                    else if ($result['esrb'] == 31)
-                        echo "m";
-                echo ".png' width=34 height=48></td>";
-                echo "<td>$".$result['price']."</td></tr>";
-            }
-        ?>
+            <?php
+                foreach($dbArray as $result) {
+                    echo "<tr";
+                        if ($result['platform'] == 1) {
+                            echo " class='active'>";
+                            echo "<td><img src='logo/pclogo";
+                        }
+                        else if ($result['platform'] == 11) {
+                            echo " class='danger'>";
+                            echo "<td><img src='logo/switchlogo";
+                        }
+                        else if ($result['platform'] == 21) {
+                            echo " class='info'>";
+                            echo "<td><img src='logo/ps4logo";
+                        }
+                        else if ($result['platform'] == 31) {
+                            echo ">";
+                            echo "<td><img src='logo/wiiulogo";
+                        }
+                    echo ".png' width=42 height=42></td>";
+                    echo "<td>".$result['name']."</td>";
+                    echo "<td>".$result['year']."</td>";
+                    echo "<td><img src='esrb/";
+                        if ($result['esrb'] == 1)
+                            echo "e";
+                        else if ($result['esrb'] == 11)
+                            echo "e10";
+                        else if ($result['esrb'] == 21)
+                            echo "t";
+                        else if ($result['esrb'] == 31)
+                            echo "m";
+                    echo ".png' width=34 height=48></td>";
+                    echo "<td>$".$result['price']."</td></tr>";
+                }
+            ?>
             </tbody>
         </table>
     </body>

@@ -17,15 +17,14 @@
             <input type="submit" name="reset" value="Logout">
         </form>
     </head>
+    
     <?php
         include 'php/api.php';
         $statement = "DELETE FROM games WHERE id = ".$_GET['id'];
         deleteData($statement);
         header("Location: admin.php");
     ?>
-    <body>
-
-    </body>
+    
     <footer>
         <hr>
         CST 336. 2017&copy; Blakeman <br />
