@@ -1,0 +1,19 @@
+[11-Dec-2017 08:03:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 1, 345, 1)' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php(27): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/FinalProject/add.php(54): newData('INSERT INTO gam...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php on line 27
+[11-Dec-2017 08:03:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 1, , 1)' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php(27): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/FinalProject/add.php(54): newData('INSERT INTO gam...')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php on line 27
+[11-Dec-2017 17:38:49 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php(19): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/FinalProject/update.php(65): getData('games WHERE id=')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php on line 19
+[11-Dec-2017 18:45:20 UTC] PHP Parse error:  syntax error, unexpected '$result' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/cst336-github/FinalProject/index.php on line 175

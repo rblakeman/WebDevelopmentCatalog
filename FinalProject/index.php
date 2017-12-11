@@ -6,6 +6,8 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Final Project</title>
         
         <a href="login.php">Log In</a>
@@ -39,9 +41,6 @@
             </form>
         </nav>
         
-        <span id="categories">
-        </span>
-        <span id='games'>
         <?php
             $i = 0; # counter
             $tempfilter = array();
@@ -110,22 +109,41 @@
             include 'php/api.php';
             $statement = "games ".$dispatch;
             $dbArray = getData($statement);
-            
+        ?>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>ESRB</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+        <?php
             foreach($dbArray as $result) {
-                echo "<div id='row'>";
-                echo "<span id='platform'><img src='logo/";
-                    if ($result['platform'] == 1)
-                        echo "pclogo";
-                    else if ($result['platform'] == 11)
-                        echo "switchlogo";
-                    else if ($result['platform'] == 21)
-                        echo "ps4logo";
-                    else if ($result['platform'] == 31)
-                        echo "wiiulogo";
-                echo ".png' width=42 height=42></span>";
-                echo "<span id='name'> ".$result['name']." </span>";
-                echo "<span id='year'> ".$result['year']." </span>";
-                echo "<span id='esrb'><img src='esrb/";
+                echo "<tr";
+                    if ($result['platform'] == 1) {
+                        echo " class='active'>";
+                        echo "<td><img src='logo/pclogo";
+                    }
+                    else if ($result['platform'] == 11) {
+                        echo " class='danger'>";
+                        echo "<td><img src='logo/switchlogo";
+                    }
+                    else if ($result['platform'] == 21) {
+                        echo " class='info'>";
+                        echo "<td><img src='logo/ps4logo";
+                    }
+                    else if ($result['platform'] == 31) {
+                        echo ">";
+                        echo "<td><img src='logo/wiiulogo";
+                    }
+                echo ".png' width=42 height=42></td>";
+                echo "<td>".$result['name']."</td>";
+                echo "<td>".$result['year']."</td>";
+                echo "<td><img src='esrb/";
                     if ($result['esrb'] == 1)
                         echo "e";
                     else if ($result['esrb'] == 11)
@@ -134,13 +152,12 @@
                         echo "t";
                     else if ($result['esrb'] == 31)
                         echo "m";
-                echo ".png' width=34 height=48></span>";
-                echo "<span id='price'> $".$result['price']." </span>";
-                echo "</div>";
-                
+                echo ".png' width=34 height=48></td>";
+                echo "<td>$".$result['price']."</td></tr>";
             }
         ?>
-        </span>
+            </tbody>
+        </table>
     </body>
     <footer>
         <hr>
