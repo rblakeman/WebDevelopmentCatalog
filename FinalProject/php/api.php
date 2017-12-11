@@ -20,8 +20,11 @@ function getData($sql) {
     return $dbArray = $statement->fetchAll();
 }
 
-function newData() {
-    
+function newData($sql) {
+    $dbConn = getDatabaseConnection(); 
+    echo $sql."<br>";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
 }
 
 function updateData($sql) {

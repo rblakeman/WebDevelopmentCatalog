@@ -24,7 +24,7 @@
             $id = $_GET['id'];
             $statement = "games WHERE id=".$id;
             $dbArray = getData($statement);
-            echo $_GET['newname'];
+            
             if (isset($_GET['newname']))
                 $newname = $_GET['newname'];
             else
