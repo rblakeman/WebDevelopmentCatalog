@@ -7,43 +7,40 @@
         <a href="index.php">Cancel</a>
         
         <script>
-            function validateUsername()
+            $("button").click(function()
             {
                 $.ajax({
                     type: "get",
-                    url: "api.php",
+                    url: "php/api.php",
                     dataType: "json",
                     data: {
-                        'username': $('#username').val(),
-                        'action': 'validate-username'
+                        'typedusername': $('#typedusername').val(),
+                        'typedpassword' : $('#typedpassword').val(),
+                        'action': 'validate-password'
                     },
                     success: function(data,status) {
                         debugger;
                         if (data.length > 0) {
-                            $('#username-invalid').html("Username is taken");
-                            $('#username-valid').empty();
+                            $('#password-valid').html("Successful Login");
+                            $('#password-invalid').empty();
                         }
                         else {
-                            $('#username-valid').html("Username is available");
-                            $('#username-invalid').empty();
+                            $('#password-invalid').html("Failed Login");
+                            $('#password-valid').empty();
                         }
-                    },
+                    }
                 });
-            }
+            });
         </script>
     </head>
     <body>
-        <form method="post">
+        <header> Log In </header>
+        <form onsubmit="return false;">
             <input type="text" name="typedusername" placeholder="Username" value="<?=$_POST['typedusername']?>"/>
             <input type="password" name="typedpassword" placeholder="Password" value="<?=$_POST['typedpassword']?>"/>
-            <input type="submit" name="submit" value="Log In" formaction="admin.php">
+            <button>Log In</button>
+            <span id="password-valid"></span> <span id="password-invalid"></span>
         </form>
-        <?php
-            if (!empty($_POST['typedusername']) || !empty($_POST['typedpassword']))
-            {
-                
-            }
-        ?>
     </body>
     <footer>
         <hr>

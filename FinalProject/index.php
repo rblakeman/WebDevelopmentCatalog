@@ -7,6 +7,7 @@
         <a href="login.php">Log In</a>
     </head>
     <body>
+        <header> Home </header>
         <nav>
             <form method="post">
                 <span id="Filter"><strong>Sort - </strong></span>

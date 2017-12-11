@@ -19,4 +19,25 @@ function getData($sql) {
     $statement->execute(); 
     return $dbArray = $statement->fetchAll();
 }
+
+function validateUser($typedusername, $typedpassword) {
+    $statement = "admin WHERE username = ".$typedusername;
+    $data = getData($statement);
+    if (!empty($data))
+    {
+        if ($data[0]['password'] == $typedpassword)
+        {
+            echo "Successful Login";
+            echo json_encode("Welcome Back: ".$data[0]['username']);
+        }
+    }
+    echo "Failed Login";
+}
+
+if ($_GET['action'] == 'validate-password' )
+{
+    $typedusername = $_GET['typedusername'];
+    $typedpassword = $_GET['typedpassword'];
+    validateUser($typedusername, $typedpassword); 
+}
 ?>

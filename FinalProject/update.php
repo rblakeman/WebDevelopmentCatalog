@@ -49,6 +49,7 @@
 
     ?>
     <body>
+        <head> Update </head>
         <form method="post">
             Name: <input type="text" placeholder="<?=$dbArray[0]['name']?>" value="<?=$_POST['newname']?>">
             <br>

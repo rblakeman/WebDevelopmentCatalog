@@ -32,6 +32,7 @@
         <a href="index.php">Log Out</a>
     </head>
     <body>
+        <header> Admin </header>
         <form method="get">
             <input type='submit' name='newid' value="Add New Game" formaction='update.php'>
         <?php
