@@ -14,15 +14,26 @@ function getDatabaseConnection() {
 function getData($sql) {
     $dbConn = getDatabaseConnection(); 
     $sql = "SELECT * from ".$sql;
-    echo $sql;
+    echo $sql."<br>";
     $statement = $dbConn->prepare($sql); 
     $statement->execute(); 
     return $dbArray = $statement->fetchAll();
 }
 
+function newData() {
+    
+}
+
+function updateData($sql) {
+    $dbConn = getDatabaseConnection(); 
+    echo $sql."<br>";
+    $stmt = $dbConn->prepare($sql);
+    $stmt->execute();
+}
+
 function deleteData($sql) {
     $dbConn = getDatabaseConnection(); 
-    echo $sql;
+    echo $sql."<br>";
     $statement = $dbConn->prepare($sql); 
     $statement->execute();
 }

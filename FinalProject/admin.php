@@ -19,8 +19,8 @@
     </head>
     <body>
         <header> Admin </header>
-        <form method="get">
-            <input type='submit' name='newid' value="Add New Game" formaction='update.php'>
+        <form method="post">
+            <input type='submit' name='newid' value="Add New Game" formaction='add.php'>
         <?php
         $auth = $_SESSION['auth'];
         if ($auth) {
@@ -53,7 +53,7 @@
                         echo "m";
                 echo ".png' width=34 height=48></span>";
                 echo "<span id='price'> $".$result['price']." </span>";
-                ?><input type='submit' name='updateid' value="<?=$_GET['id']=$result['id']?>" formaction='update.php'><?php
+                echo "<input type='submit' name='updateid' value='Update' formaction='update.php?updateid=".$result['id']."'>";
                 echo "</div>";
             }
         }

@@ -19,7 +19,7 @@
     </head>
     <?php
         include 'php/api.php';
-        $statement = "DELETE FROM games WHERE id = " . $_GET['userId'];
+        $statement = "DELETE FROM games WHERE id = ".$_GET['id'];
         deleteData($statement);
         header("Location: admin.php");
     ?>
