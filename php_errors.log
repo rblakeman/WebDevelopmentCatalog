@@ -1,0 +1,63 @@
+[11-Dec-2017 05:36:27 UTC] PHP Parse error:  syntax error, unexpected ''php/api.php'' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/cst336-github/FinalProject/login.php on line 19
+[11-Dec-2017 05:37:41 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 9
+[11-Dec-2017 05:37:41 UTC] PHP Stack trace:
+[11-Dec-2017 05:37:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:37:41 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:9
+[11-Dec-2017 05:39:11 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 9
+[11-Dec-2017 05:39:11 UTC] PHP Stack trace:
+[11-Dec-2017 05:39:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:39:11 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:9
+[11-Dec-2017 05:39:16 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/login.php on line 10
+[11-Dec-2017 05:39:16 UTC] PHP Stack trace:
+[11-Dec-2017 05:39:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:0
+[11-Dec-2017 05:39:16 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:10
+[11-Dec-2017 05:39:35 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/login.php on line 10
+[11-Dec-2017 05:39:35 UTC] PHP Stack trace:
+[11-Dec-2017 05:39:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:0
+[11-Dec-2017 05:39:35 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:10
+[11-Dec-2017 05:39:38 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/login.php on line 10
+[11-Dec-2017 05:39:38 UTC] PHP Stack trace:
+[11-Dec-2017 05:39:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:0
+[11-Dec-2017 05:39:38 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:10
+[11-Dec-2017 05:40:47 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 9
+[11-Dec-2017 05:40:47 UTC] PHP Stack trace:
+[11-Dec-2017 05:40:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:40:47 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:9
+[11-Dec-2017 05:41:28 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 9
+[11-Dec-2017 05:41:28 UTC] PHP Stack trace:
+[11-Dec-2017 05:41:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:41:28 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:9
+[11-Dec-2017 05:42:18 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 84
+[11-Dec-2017 05:42:18 UTC] PHP Stack trace:
+[11-Dec-2017 05:42:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:42:18 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:84
+[11-Dec-2017 05:42:47 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 84
+[11-Dec-2017 05:42:47 UTC] PHP Stack trace:
+[11-Dec-2017 05:42:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:42:47 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:84
+[11-Dec-2017 05:42:51 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 84
+[11-Dec-2017 05:42:51 UTC] PHP Stack trace:
+[11-Dec-2017 05:42:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:42:51 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:84
+[11-Dec-2017 05:44:03 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/login.php on line 10
+[11-Dec-2017 05:44:03 UTC] PHP Stack trace:
+[11-Dec-2017 05:44:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:0
+[11-Dec-2017 05:44:03 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/login.php:10
+[11-Dec-2017 05:44:08 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 84
+[11-Dec-2017 05:44:08 UTC] PHP Stack trace:
+[11-Dec-2017 05:44:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:44:08 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:84
+[11-Dec-2017 05:44:14 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 84
+[11-Dec-2017 05:44:14 UTC] PHP Stack trace:
+[11-Dec-2017 05:44:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:44:14 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:84
+[11-Dec-2017 05:44:51 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/ubuntu/workspace/cst336-github/FinalProject/admin.php on line 84
+[11-Dec-2017 05:44:51 UTC] PHP Stack trace:
+[11-Dec-2017 05:44:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:0
+[11-Dec-2017 05:44:51 UTC] PHP   2. session_destroy() /home/ubuntu/workspace/cst336-github/FinalProject/admin.php:84
+[11-Dec-2017 05:58:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'games' at line 1' in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php:27
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php(27): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336-github/FinalProject/delete.php(24): deleteData('games')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-github/FinalProject/php/api.php on line 27

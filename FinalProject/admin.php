@@ -1,41 +1,29 @@
+<?php
+    session_start();
+?>
+
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <title>Final Project</title>
-                
-        <script>
-            function validateUsername()
-            {
-                $.ajax({
-                    type: "get",
-                    url: "api.php",
-                    dataType: "json",
-                    data: {
-                        'username': $('#username').val(),
-                        'action': 'validate-username'
-                    },
-                    success: function(data,status) {
-                        debugger;
-                        if (data.length > 0) {
-                            $('#username-invalid').html("Username is taken");
-                            $('#username-valid').empty();
-                        }
-                        else {
-                            $('#username-valid').html("Username is available");
-                            $('#username-invalid').empty();
-                        }
-                    },
-                });
-            }
-        </script>
-        <a href="index.php">Log Out</a>
+        <?php
+        if (isset($_POST['reset']))
+        {
+            session_destroy();
+            header("Location: index.php");
+        }?>
+        <form method="post">
+            <input type="submit" name="reset" value="Log Out">
+        </form>
     </head>
     <body>
         <header> Admin </header>
         <form method="get">
             <input type='submit' name='newid' value="Add New Game" formaction='update.php'>
         <?php
+        $auth = $_SESSION['auth'];
+        if ($auth) {
             include 'php/api.php';
             $statement = "games";
             $dbArray = getData($statement);
@@ -68,6 +56,11 @@
                 ?><input type='submit' name='updateid' value="<?=$_GET['id']=$result['id']?>" formaction='update.php'><?php
                 echo "</div>";
             }
+        }
+        else {
+            session_destroy();
+            header("Location: index.php");
+        }
         ?>
         </form>
     </body>

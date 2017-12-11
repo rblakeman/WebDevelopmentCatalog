@@ -25,6 +25,10 @@
             $statement = "games WHERE id=".$id;
             $dbArray = getData($statement);
         }
+        if (isset($_GET['newid']))
+        {
+            
+        }
         else {
             header("Location: admin.php");
         }
@@ -53,7 +57,7 @@
                 <option value="wiiu" <?php if ($dbArray[0]['platform'] == 31) echo "selected"?> >WiiU</option>
             </select>
             <br>
-            <input type="submit" value="Update" formaction="admin.php">
+            <input type="submit" value="Add" formaction="admin.php">
             <?php echo "[<a onclick='return confirmDelete()' href='delete.php?userId=".$dbArray[0]['id']."'>Delete</a>]<br/>"; ?>
         </form>
     </body>

@@ -20,6 +20,13 @@ function getData($sql) {
     return $dbArray = $statement->fetchAll();
 }
 
+function deleteData($sql) {
+    $dbConn = getDatabaseConnection(); 
+    echo $sql;
+    $statement = $dbConn->prepare($sql); 
+    $statement->execute();
+}
+
 function validateUser($typedusername, $typedpassword) {
     $statement = "admin WHERE username = ".$typedusername;
     $data = getData($statement);
