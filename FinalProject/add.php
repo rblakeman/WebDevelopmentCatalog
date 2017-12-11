@@ -15,7 +15,7 @@
             session_destroy();
             header("Location: index.php");
         }?>
-        <form method="post">
+        <form class="reset" method="post">
             <input type="submit" name="reset" value="Log Out">
         </form>
     </head>
@@ -23,7 +23,7 @@
     <?php
         include 'php/api.php';
         
-        if (isset($_GET['Add'])) {
+        if (isset($_GET['added'])) {
             $valid = true;
             if (isset($_GET['newname']))
                 $newname = $_GET['newname'];
@@ -63,7 +63,8 @@
         }
     ?>
     <body>
-        <head> New </head>
+        <div class="container">
+        <header> New </header>
         <form method="get">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Name: </label>
@@ -95,8 +96,9 @@
                     <option value="31" <?php if ($dbArray[0]['platform'] == 31) echo "selected"?> >WiiU</option>
                 </select>
             </div>
-            <input type="submit" name="Add" value="added">
+            <input type="submit" name="added" value="Add">
         </form>
+        </div>
     </body>
     <footer>
         <hr>

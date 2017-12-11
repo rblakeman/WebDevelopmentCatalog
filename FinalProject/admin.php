@@ -15,19 +15,21 @@
             session_destroy();
             header("Location: index.php");
         }?>
-        <form method="post">
+        <form class="reset" method="post">
             <input type="submit" name="reset" value="Log Out">
         </form>
     </head>
     
     <body>
-        <header> Admin </header>
+        <div class="container">
+        <header> <strong>Admin</strong> </header>
         <form method="post">
             <input type='submit' name='newid' value="Add New Game" formaction='add.php'>
         </form>
         <table class="table">
             <thead>
               <tr>
+                <th>id</th>
                 <th>Platform</th>
                 <th>Name</th>
                 <th>Year</th>
@@ -44,21 +46,26 @@
             $dbArray = getData($statement);
             
             foreach($dbArray as $result) {
+                echo "<form method='get'>";
                 echo "<tr";
                     if ($result['platform'] == 1) {
                         echo " class='active'>";
+                        echo "<td>".$result['id']."</td>";
                         echo "<td><img src='logo/pclogo";
                     }
                     else if ($result['platform'] == 11) {
                         echo " class='danger'>";
+                        echo "<td>".$result['id']."</td>";
                         echo "<td><img src='logo/switchlogo";
                     }
                     else if ($result['platform'] == 21) {
                         echo " class='info'>";
+                        echo "<td>".$result['id']."</td>";
                         echo "<td><img src='logo/ps4logo";
                     }
                     else if ($result['platform'] == 31) {
                         echo ">";
+                        echo "<td>".$result['id']."</td>";
                         echo "<td><img src='logo/wiiulogo";
                     }
                 echo ".png' width=42 height=42></td>";
@@ -75,8 +82,10 @@
                         echo "m";
                 echo ".png' width=34 height=48></td>";
                 echo "<td>$".$result['price']."</td>";
-                echo "<td><input type='submit' name='updateid' value='Update' formaction='update.php?updateid=".$result['id']."'></td>";
+                echo "<input type='hidden' name='updateid' value='".$result['id']."'>";
+                echo "<td><input type='submit' name='updatebutton' value='Update' formaction='update.php'></td>";
                 echo "</tr>";
+                echo "</form>";
             }
         }
         else {
@@ -86,6 +95,7 @@
         ?>
             </tbody>
         </table>
+        </div>
     </body>
     
     <footer>

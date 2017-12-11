@@ -15,13 +15,14 @@
             session_destroy();
             header("Location: index.php");
         }?>
-        <form method="post">
-            <input type="submit" name="reset" value="Log Out">
+        <form class="reset" method="post">
+            <input type="submit" name="reset" value="Cancel">
         </form>
     </head>
     
     <body>
-        <header> Log In </header>
+        <div class="container">
+        <header> <strong>Log In</strong> </header>
         <?php
             include 'php/api.php';
             $statement = "admin ".$dispatch;
@@ -83,6 +84,7 @@
                 <?php
             }
         ?>
+        </div>
     </body>
     
     <footer>

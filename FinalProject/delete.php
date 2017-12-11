@@ -13,7 +13,7 @@
             session_destroy();
             header("Location: index.php");
         }?>
-        <form method="post">
+        <form class="reset" method="post">
             <input type="submit" name="reset" value="Logout">
         </form>
     </head>

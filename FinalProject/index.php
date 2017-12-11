@@ -10,11 +10,19 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Final Project</title>
         
-        <a href="login.php">Log In</a>
+        <?php
+        if (isset($_POST['reset']))
+        {
+            session_destroy();
+            header("Location: login.php");
+        }?>
+        <form class="reset" method="post">
+            <input type="submit" name="reset" value="Log In">
+        </form>
     </head>
     
     <body>
-        <header> Home </header>
+        <header> <strong>Home</strong> </header>
         <nav>
             <form method="post">
                 <span id="Filter"><strong>Sort - </strong></span>
@@ -111,7 +119,7 @@
             $statement = "games ".$dispatch;
             $dbArray = getData($statement);
         ?>
-        
+        <div class="container">
         <table class="table">
             <thead>
               <tr>
@@ -160,6 +168,7 @@
             ?>
             </tbody>
         </table>
+        </div>
     </body>
     <footer>
         <hr>

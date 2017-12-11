@@ -15,7 +15,7 @@
             session_destroy();
             header("Location: index.php");
         }?>
-        <form method="post">
+        <form class="reset" method="post">
             <input type="submit" name="reset" value="Log Out">
         </form>
     </head>
@@ -41,9 +41,8 @@
             else
                 $newesrb = $dbArray[0]['esrb'];
             if (isset($_GET['newprice'])) {
-                $tempstr = $_GET['newprice'];
-                $newprice = ltrim($tempstr, "$");
                 $newprice = $_GET['newprice'];
+                $newprice = trim($newprice, "$");
             }
             else
                 $newprice = $dbArray[0]['price'];
@@ -73,7 +72,8 @@
     ?>
     
     <body>
-        <head> Update </head>
+        <div class="container">
+        <header> <strong>Update</strong> </header>
         <form method="get">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Name: </label>
@@ -109,6 +109,7 @@
             <?php   echo "<input type='submit' name='updated' value='Update' formaction='update.php?id=".$dbArray[0]['id']."'>";
                     echo "<input type='submit' name='deleted' value='Delete' formaction='delete.php?id=".$dbArray[0]['id']."'>";    ?>
         </form>
+        </div>
     </body>
     
     <footer>
