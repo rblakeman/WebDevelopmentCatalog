@@ -14,7 +14,7 @@ function getDatabaseConnection() {
 function getData($sql) {
     $dbConn = getDatabaseConnection(); 
     $sql = "SELECT * from ".$sql;
-    echo $sql."<br>";
+    //echo $sql."<br>";
     $statement = $dbConn->prepare($sql); 
     $statement->execute(); 
     return $dbArray = $statement->fetchAll();
@@ -22,21 +22,21 @@ function getData($sql) {
 
 function newData($sql) {
     $dbConn = getDatabaseConnection(); 
-    echo $sql."<br>";
+    //echo $sql."<br>";
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
 }
 
 function updateData($sql) {
     $dbConn = getDatabaseConnection(); 
-    echo $sql."<br>";
+    //echo $sql."<br>";
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
 }
 
 function deleteData($sql) {
     $dbConn = getDatabaseConnection(); 
-    echo $sql."<br>";
+    //echo $sql."<br>";
     $statement = $dbConn->prepare($sql); 
     $statement->execute();
 }
@@ -60,5 +60,20 @@ if ($_GET['action'] == 'validate-password' )
     $typedusername = $_GET['typedusername'];
     $typedpassword = $_GET['typedpassword'];
     validateUser($typedusername, $typedpassword); 
+}
+
+function getUsersThatMatchUserName() {
+    $username = $_GET['username']; 
+    $dbConn = getDatabaseConnection(); 
+    $sql = "SELECT * from admin WHERE username='$username'"; 
+    
+    $statement = $dbConn->prepare($sql); 
+    $statement->execute(); 
+    $records = $statement->fetchAll(); 
+    echo json_encode($records); 
+}
+if ($_GET['action'] == 'validate-username' )
+{
+    getUsersThatMatchUserName(); 
 }
 ?>

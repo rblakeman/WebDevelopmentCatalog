@@ -9,6 +9,29 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Final Project</title>
+        <script>
+            function validateUsername()
+            {
+                $.ajax({
+                    type: "get",
+                    url: "php/api.php",
+                    dataType: "json",
+                    data: {
+                        'username': $('#testuser').val(),
+                        'action': 'validate-username'
+                    },
+                    success: function(data,status) {
+                        debugger;
+                        if (data.length > 0) {
+                            $('#username-invalid').empty();
+                        }
+                        else {
+                            $('#username-invalid').html("Invalid Username");
+                        }
+                    },
+                });
+            }
+        </script>
         <?php
         if (isset($_POST['reset']))
         {
@@ -49,14 +72,14 @@
                         }
                         else
                         {
-                            ?><div id="Error">Wrong Password</div><?php
+                            ?><span class="label label-danger">Wrong Password</span><?php
                             $auth = $_SESSION['auth'] = false;
                             break;
                         }
                     }
                     if ($i == sizeof($dbArray)-1)
                     {
-                        ?><div id="Error">No Records of that Username were found</div><?php
+                        ?><span class="label label-danger">Wrong Password</span><?php
                         $auth = $_SESSION['auth'] = false;
                     }
                 }
@@ -72,7 +95,7 @@
                 <form method="post">
                     <div class="form-group">
                         <label for="testuser">Username</label>  <small id="userHelp" class="form-text text-muted">admin</small>
-                        <input type="text" name="typedusername" class="form-control" id="testuser" aria-describedby="userHelp" placeholder="Username" value="<?=$_POST['typedusername']?>">
+                        <input onchange="validateUsername();" type="text" name="typedusername" class="form-control" id="testuser" aria-describedby="userHelp" placeholder="Username" value="<?=$_POST['typedusername']?>"> <span id="username-invalid" class="label label-warning"></span>
                     </div>
                     
                     <div class="form-group">

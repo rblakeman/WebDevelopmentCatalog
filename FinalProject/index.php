@@ -42,10 +42,10 @@
                 <strong> Year:</strong> <input type="number" name="year" width:"4" style="width: 4em" value="year">
                 <br>
                 <strong>Platform:</strong>
-                <input type="checkbox" name="pc" value="true">PC
-                <input type="checkbox" name="switch" value="true">Switch
-                <input type="checkbox" name="ps4" value="true">PS4
-                <input type="checkbox" name="wiiu" value="true">WiiU
+                <input onchange="relist();" type="checkbox" name="pc" value="true">PC
+                <input onchange="relist();" type="checkbox" name="switch" value="true">Switch
+                <input onchange="relist();" type="checkbox" name="ps4" value="true">PS4
+                <input onchange="relist();" type="checkbox" name="wiiu" value="true">WiiU
                 <br>
             </form>
         </nav>
