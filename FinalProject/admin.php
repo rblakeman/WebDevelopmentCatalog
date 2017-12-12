@@ -16,7 +16,7 @@
             header("Location: index.php");
         }?>
         <form class="reset" method="post">
-            <input type="submit" name="reset" value="Log Out">
+            <input type="submit" name="reset" class="btn btn-warning" value="Log Out">
         </form>
     </head>
     
@@ -24,7 +24,7 @@
         <div class="container">
         <header> <strong>Admin</strong> </header>
         <form method="post">
-            <input type='submit' name='newid' value="Add New Game" formaction='add.php'>
+            <input type='submit' name='newid' class="btn btn-primary" value="Add New Game" formaction='add.php'>
         </form>
         <table class="table">
             <thead>
@@ -44,7 +44,7 @@
             include 'php/api.php';
             $statement = "games";
             $dbArray = getData($statement);
-            
+            $total = $avg = $sum = 0;
             foreach($dbArray as $result) {
                 echo "<form method='get'>";
                 echo "<tr";
@@ -83,21 +83,39 @@
                 echo ".png' width=34 height=48></td>";
                 echo "<td>$".$result['price']."</td>";
                 echo "<input type='hidden' name='updateid' value='".$result['id']."'>";
-                echo "<td><input type='submit' name='updatebutton' value='Update' formaction='update.php'></td>";
+                echo "<td><input type='submit' name='updatebutton' class='btn btn-secondary' value='Update' formaction='update.php'></td>";
                 echo "</tr>";
                 echo "</form>";
+                $total += 1;
+                $sum += $result['price'];
             }
+            $avg = $sum/$total;
+            echo "</tbody>";
+            echo "</table>";
+            
+            echo "<table class='table table-striped'>";
+            echo "<thead>";
+            echo "<tr>";
+                echo "<th><button name='totalbutton' class='btn btn-info' id='reportbtn1'>Total Number of Games</button></th>";
+                echo "<th><button name='averagebutton' class='btn btn-info' id='reportbtn2'>Average Price of Games</button></th>";
+                echo "<th><button name='sumbutton' class='btn btn-info' id='reportbtn3'>Sum of all Games</button></th>";
+            echo "</tr>";
+            echo "<tr>";
+                echo "<th><span id='total' style='visibility:hidden'>".$total." Games</span></th>";
+                echo "<th><span id='avg' style='visibility:hidden'>$".number_format($avg, 2)." Average Price</span></th>";
+                echo "<th><span id='sum' style='visibility:hidden'>$".$sum." Total Cost</span></th>";
+            echo "</tr>";
+            echo "</thead>";
+            echo "</table>";
         }
         else {
             session_destroy();
             header("Location: index.php");
         }
         ?>
-            </tbody>
-        </table>
         </div>
     </body>
-    
+    <script type="text/javascript" src="js/validation.js"></script>
     <footer>
         <hr>
         CST 336. 2017&copy; Blakeman <br />

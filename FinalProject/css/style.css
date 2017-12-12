@@ -13,3 +13,8 @@ header {
     padding-right: 20px;
     padding-top: 20px;
 }
+
+.form-group {
+    width: 50%;
+    margin: 0 auto;
+}

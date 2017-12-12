@@ -17,7 +17,7 @@
             header("Location: login.php");
         }?>
         <form class="reset" method="post">
-            <input type="submit" name="reset" value="Log In">
+            <input type="submit" name="reset" class="btn btn-info" value="Log In">
         </form>
     </head>
     

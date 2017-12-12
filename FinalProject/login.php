@@ -16,7 +16,7 @@
             header("Location: index.php");
         }?>
         <form class="reset" method="post">
-            <input type="submit" name="reset" value="Cancel">
+            <input type="submit" name="reset" class="btn btn-warning" value="Cancel">
         </form>
     </head>
     

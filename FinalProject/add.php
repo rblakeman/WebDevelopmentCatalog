@@ -16,7 +16,7 @@
             header("Location: index.php");
         }?>
         <form class="reset" method="post">
-            <input type="submit" name="reset" value="Log Out">
+            <input type="submit" name="reset" class="btn btn-warning" value="Log Out">
         </form>
     </head>
     
@@ -37,8 +37,10 @@
                 $newesrb = $_GET['newesrb'];
             else
                 $valid = false; 
-            if (isset($_GET['newprice']))
+            if (isset($_GET['newprice'])) {
                 $newprice = $_GET['newprice'];
+                $newprice = trim($newprice, "$");
+            }
             else
                 $valid = false; 
             if (isset($_GET['newplatform']))
@@ -96,9 +98,10 @@
                     <option value="31" <?php if ($dbArray[0]['platform'] == 31) echo "selected"?> >WiiU</option>
                 </select>
             </div>
-            <input type="submit" name="added" value="Add">
+            <input type="submit" name="added" class="btn btn-success" id="validate" value="Add" disabled="disabled">
         </form>
         </div>
+        <script type="text/javascript" src="js/validation.js"></script>
     </body>
     <footer>
         <hr>

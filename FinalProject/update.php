@@ -16,7 +16,7 @@
             header("Location: index.php");
         }?>
         <form class="reset" method="post">
-            <input type="submit" name="reset" value="Log Out">
+            <input type="submit" name="reset" class="btn btn-warning" value="Log Out">
         </form>
     </head>
     
@@ -106,10 +106,11 @@
                 </select>
             </div>
             <input type="hidden" name="id" value="<?=$dbArray[0]['id']?>" >
-            <?php   echo "<input type='submit' name='updated' value='Update' formaction='update.php?id=".$dbArray[0]['id']."'>";
-                    echo "<input type='submit' name='deleted' value='Delete' formaction='delete.php?id=".$dbArray[0]['id']."'>";    ?>
+            <?php   echo "<input type='submit' name='updated' class='btn btn-success' id='validate'  value='Update' formaction='update.php?id=".$dbArray[0]['id']."'>";
+                    echo "<input type='submit' name='deleted' class='btn btn-danger' value='Delete' formaction='delete.php?id=".$dbArray[0]['id']."'>";    ?>
         </form>
         </div>
+        <script type="text/javascript" src="js/validation.js"></script>
     </body>
     
     <footer>
